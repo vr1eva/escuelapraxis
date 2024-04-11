@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, EB_Garamond, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-garamond"
+})
+const noto = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["400", "900"],
+  variable: "--font-noto"
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Header />
-      <body className={inter.className}>{children}</body>
-    </html>
+    <html lang="en" className={`${inter.variable} ${garamond.variable} ${noto.variable}`} >
+      <body>
+        <Header />
+        {children}
+      </body>
+    </html >
   );
 }

@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,7 +18,17 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-garamond)'],
+        noto: ['var(--font-noto)']
+      },
       colors: {
+        gray: "#828282",
+        dark: "#1B1B1B",
+        lightGray: "#D4D2CF",
+        lightLightGray: "#E8E8E8",
+        red: "#E62519",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

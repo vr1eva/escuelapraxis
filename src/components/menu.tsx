@@ -14,18 +14,14 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { LINKS } from "@/assets/constants"
-import { NavbarItemProps } from "@/types"
+import { MenuProps, NavbarItemProps } from "@/types"
+import { usePathname } from 'next/navigation'
+import { TypographyNavbarLink } from "@/components/typography"
 
-export default function Navbar() {
+export default function Menu({ className }: MenuProps) {
     return (
-        <Menu />
-    )
-}
-
-export function Menu() {
-    return (
-        <NavigationMenu>
-            <NavigationMenuList>
+        <NavigationMenu className={className}>
+            <NavigationMenuList className="flex gap-[48px]">
                 {LINKS.map(link => (
                     <NavbarItem sublinks={link.sublinks} href={link.href} title={link.title} key={link.href} />
                 ))}
@@ -61,10 +57,11 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem"
 
 function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
+    const pathname = usePathname()
     if (sublinks) {
         return (
             <NavigationMenuItem>
-                <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger><TypographyNavbarLink className={href === pathname ? "font-black" : ""}>{title}</TypographyNavbarLink></NavigationMenuTrigger>
                 <NavigationMenuContent>
                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                         {sublinks.map(link => (
@@ -81,7 +78,7 @@ function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
             <NavigationMenuItem key={href}>
                 <Link href={href} legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        {title}
+                        <TypographyNavbarLink className={href === pathname ? "font-black" : ""}>{title}</TypographyNavbarLink>
                     </NavigationMenuLink>
                 </Link>
             </NavigationMenuItem>

@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export interface NavbarItemProps {
     sublinks?: NavbarLinkItem[],
     title: string,
@@ -9,3 +11,16 @@ export type NavbarLinkItem = {
     title: string,
 }
 
+
+export interface TypographyProps {
+    children: ReactNode,
+    className?: string
+}
+
+export interface MenuProps {
+    className?: string
+}
+
+export interface SearchFormProps {
+    className?: string
+}
