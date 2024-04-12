@@ -75,7 +75,7 @@ function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
         )
     } else if (href) {
         return (
-            <NavigationMenuItem key={href}>
+            <NavigationMenuItem>
                 <Link href={href} legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         <TypographyNavbarLink className={href === pathname ? "font-black" : ""}>{title}</TypographyNavbarLink>
