@@ -12,8 +12,8 @@ export default function Footer() {
         news: FOOTER_NEWS
     }
     return <>
-        <footer className="mt-[134px] bg-[#1e1e1e] p-[32px_48px_39px] flex">
-            <div className="max-w-[591px]">
+        <footer className=" bg-[#1e1e1e] p-[32px_48px_39px] flex h-[462px] mt-[260px]">
+            <div className="max-w-[536px]">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>
                 <ul className="mt-[24px] flex gap-[12px]">
@@ -24,10 +24,10 @@ export default function Footer() {
                     ))}
                 </ul>
             </div>
-            <div className="max-w-[522px] flex gap-[40px] ml-auto">
+            <div className="flex gap-[40px] ml-auto">
                 <div>
                     <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Secciones</h6>
-                    <ul className="pl-[16px] flex flex-col gap-y-[20px] mt-4">
+                    <ul className="pl-[16px] flex flex-col gap-y-[20px] mt-4 max-w-[148px]">
                         {FOOTER_SECTIONS.map(section => (
                             <li key={section.label}>
                                 <Link href={section.href} className="text-[18px] font-light text-white">{section.label}</Link>

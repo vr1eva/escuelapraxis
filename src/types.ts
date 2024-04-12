@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 
 export interface NavbarItemProps {
@@ -53,4 +54,14 @@ export type Post = {
 
 export interface PostThumbnailProps {
     post: Post
+}
+
+export type Quote = {
+    content: string,
+    signature: string,
+    background: StaticImageData
+}
+
+export interface QuoteProps {
+    quote: Quote
 }

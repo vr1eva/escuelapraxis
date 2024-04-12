@@ -64,5 +64,9 @@ export function TypographyNavbarLink({ children, className }: TypographyProps) {
     )
 }
 
-// SANS => human
-// MONO => hanuman
+export interface SectionHeadingProps {
+    text: string
+}
+
+
+// ice t freindshipo lvl of companionship
