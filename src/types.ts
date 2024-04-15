@@ -1,6 +1,10 @@
 import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 
+export interface PostPreviewProps {
+    post: Post
+}
+
 export interface NavbarItemProps {
     sublinks?: NavbarLinkItem[],
     title: string,
@@ -45,11 +49,13 @@ export enum PostType {
 }
 
 export type Post = {
+    createdAt: string,
     id: string,
     coverUrl: string,
     type: PostType
     title: string,
-    description: string
+    description: string,
+    href: string
 }
 
 export interface PostThumbnailProps {

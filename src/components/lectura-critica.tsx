@@ -3,7 +3,7 @@ import { TypographyBodyBold, TypographyBodyLight, TypographyH2, TypographyLink, 
 import Link from "next/link";
 import { PostThumbnailProps } from "@/types";
 import Image from "next/image"
-import { POSTS } from "@/assets/constants"
+import { HIGHLIGHTED_POSTS } from "@/assets/constants"
 
 export default function LecturaCritica() {
     const content = {
@@ -17,7 +17,7 @@ export default function LecturaCritica() {
                 <Link href="/libros"><TypographyBodyBold className="text-red p-[10px_20px]">Ver más</TypographyBodyBold></Link>
             </div>
             <ul className="flex justify-center mt-[32px]">
-                {POSTS.map(post => (
+                {HIGHLIGHTED_POSTS.map(post => (
                     <PostThumbnail key={post.id} post={post} />
                 ))}
             </ul>
