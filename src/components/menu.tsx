@@ -61,9 +61,9 @@ function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
     if (sublinks) {
         return (
             <NavigationMenuItem>
-                <NavigationMenuTrigger><TypographyNavbarLink className={href === pathname ? "font-black" : ""}>{title}</TypographyNavbarLink></NavigationMenuTrigger>
+                <NavigationMenuTrigger><Link href={href}><TypographyNavbarLink className={href === pathname ? "font-black" : ""}>{title}</TypographyNavbarLink></Link></NavigationMenuTrigger>
                 <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]  z-200">
                         {sublinks.map(link => (
                             <ListItem key={link.href} href={link.href} title={link.title}>
                                 {link.title}

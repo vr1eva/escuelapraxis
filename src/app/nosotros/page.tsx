@@ -1,8 +1,9 @@
-import { SectionHeadingProps, TypographyBodyRegular, TypographyH1, TypographyH2 } from "@/components/typography";
+import { TypographyBodyRegular, TypographyH1, TypographyH2 } from "@/components/typography";
 import Image from "next/image"
 import nosotros from "@/assets/nosotros.png"
 import quoteBackground from "@/assets/quoteBackground.png"
 import { QuoteProps } from "@/types"
+import SectionHeading from "@/components/section-heading";
 
 export default function Page() {
     const content = {
@@ -50,11 +51,7 @@ export default function Page() {
     )
 }
 
-function SectionHeading({ text }: SectionHeadingProps) {
-    return (
-        <TypographyH2 className="border-l-2 pl-[11px] border-red pt-[2px]">{text}</TypographyH2>
-    )
-}
+
 
 function Quote({ quote }: QuoteProps) {
     return (

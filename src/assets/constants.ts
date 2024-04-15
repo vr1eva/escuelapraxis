@@ -1,6 +1,9 @@
 import email from "@/assets/email.svg"
 import fb from "@/assets/fb.svg"
 import instagram from "@/assets/instagram.svg"
+import articulos from "@/assets/articulos.png"
+import columna from "@/assets/columna.png"
+import reseñas from "@/assets/reseñas.png"
 
 import { Post, PostType } from "@/types"
 export const LINKS = [
@@ -13,6 +16,11 @@ export const LINKS = [
         title: "Sobre Nosotros"
     },
     {
+        href: "/libros",
+        title: "Nuestros Libros"
+    },
+    {
+        href: "/lectura-critica",
         sublinks: [
             {
                 href: "/columna-praxis",
@@ -30,12 +38,9 @@ export const LINKS = [
                 type: "link"
             },
         ],
-        title: "Sobre Nosotros"
+        title: "Lectura Crítica"
     },
-    {
-        href: "/libros",
-        title: "Nuestros Libros"
-    },
+
     {
         href: "/contacto",
         title: "Contacto"
@@ -122,4 +127,23 @@ export const FOOTER_NEWS = [
         label: `Revista: Época Socialista N°5`,
         href: `/revista`
     },
+]
+
+export const READING_INDEX_LINKS = [
+    {
+        label: "Artículos",
+        image: articulos,
+        href: "/articulos"
+    },
+    {
+        label: "Columna Praxis",
+        image: columna,
+        href: "/columna"
+    },
+    {
+        label: "Reseñas",
+        image: reseñas,
+        href: "/reseñas"
+    }
+
 ]

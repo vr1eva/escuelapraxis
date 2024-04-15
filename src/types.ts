@@ -4,7 +4,7 @@ import { ReactNode } from "react"
 export interface NavbarItemProps {
     sublinks?: NavbarLinkItem[],
     title: string,
-    href?: string
+    href: string
 }
 
 export type NavbarLinkItem = {
@@ -64,4 +64,15 @@ export type Quote = {
 
 export interface QuoteProps {
     quote: Quote
+}
+
+export type IndexLink = {
+    label: string,
+    image: StaticImageData,
+    href: string
+
+}
+
+export interface IndexLinkProps {
+    link: IndexLink
 }
