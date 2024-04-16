@@ -1,4 +1,4 @@
-import { HIGHLIGHTED_BOOKS, BIOGRAPHY_BOOKS } from "@/assets/constants"
+import { HIGHLIGHTED_BOOKS, BIOGRAPHY_BOOKS, BOOKS_BREADCRUMB } from "@/assets/constants"
 import nuestrosLibros from "@/assets/nuestrosLibros.png"
 import Banner from "@/components/banner"
 import BookList from "@/components/book-list"
@@ -10,7 +10,7 @@ export default function NuestrosLibros() {
     return (
         <main className="min-h-screen">
             <Banner image={nuestrosLibros} />
-            <Breadcrumb />
+            <Breadcrumb segments={BOOKS_BREADCRUMB} />
             <Introduction />
             <Separator className="max-w-[1160px] mx-auto mt-[52px] mb-[8px]" />
             <BookList heading="Destacados" books={HIGHLIGHTED_BOOKS} />

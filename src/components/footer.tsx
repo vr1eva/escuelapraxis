@@ -49,7 +49,7 @@ export default function Footer() {
         </footer>
         <div className="flex flex-col">
             <Separator className="max-w-[1344px] mx-auto" />
-            <p className="text-center text-white py-[39px]">EFP Praxis 2024</p>
+            <p className="text-center text-white py-[39px] font-bold text-[16px] leading-[150%] -tracking-[1%]">EFP Praxis 2024</p>
         </div>
     </div>
 }

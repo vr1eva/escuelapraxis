@@ -109,3 +109,12 @@ export interface ReviewPageParams {
 export interface SuggestedReadingsProps {
     heading: string
 }
+
+export interface BreadcrumbProps {
+    segments: Segment[]
+}
+
+export type Segment = {
+    href: string,
+    title: string
+}

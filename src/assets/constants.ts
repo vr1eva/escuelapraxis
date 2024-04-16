@@ -6,6 +6,53 @@ import columna from "@/assets/columna.png"
 import reseñas from "@/assets/reseñas.png"
 import { PostType } from "@/types"
 
+export const CONTACT_BREADCRUMB = [
+    {
+        title: "Contacto",
+        href: "/contacto"
+    }
+]
+
+export const BOOKS_BREADCRUMB = [
+    {
+        title: "Nuestros Libros",
+        href: "/nuestros-libros"
+    }
+]
+
+export const COLUMN_BREADCRUMB = [
+    {
+        title: "Lectura Crítica",
+        href: "/lectura-critica"
+    },
+    {
+        title: "Columna Praxis",
+        href: "/lectura-critica/columna"
+    }
+]
+
+export const REVIEW_BREADCRUMB = [
+    {
+        title: "Lectura Crítica",
+        href: "/lectura-critica"
+    },
+    {
+        title: "Reseñas",
+        href: "/lectura-critica/reviews"
+    }
+]
+
+export const ARTICLES_BREADCRUMB = [
+    {
+        title: "Lectura Crítica",
+        href: "/lectura-critica"
+    },
+    {
+        title: "Artículos",
+        href: "/lectura-critica/articulos"
+    }
+]
+
 export const BIOGRAPHY_BOOKS = [
     {
         id: "1",

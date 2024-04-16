@@ -1,11 +1,16 @@
+"use client"
+
 import Breadcrumb from "@/components/breadcrumb";
 import PageHeading from "@/components/page-heading";
 import { TypographyBodyRegular, TypographyTitle } from "@/components/typography";
 import { ReviewPageParams } from "@/types";
 import Image from "next/image"
 import SuggestedReadings from "@/components/suggested-readings"
+import { REVIEW_BREADCRUMB } from "@/assets/constants";
+import { usePathname } from "next/navigation";
 
 export default function Page({ params }: ReviewPageParams) {
+    const pathname = usePathname()
     const data = {
         heading: `"Mao en su tinta" - Eduardo del Río (RIUS)`,
         author: `John Doe`,
@@ -16,7 +21,10 @@ export default function Page({ params }: ReviewPageParams) {
 
     return (
         <>
-            <Breadcrumb />
+            <Breadcrumb segments={[...REVIEW_BREADCRUMB, {
+                title: data.heading,
+                href: pathname
+            }]} />
             <div className="max-w-[1160px] mx-auto flex gap-[33px]">
                 <div>
                     <PageHeading>{data.heading}</PageHeading>
