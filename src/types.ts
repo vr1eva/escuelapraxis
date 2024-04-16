@@ -99,3 +99,13 @@ export interface PageHeadingProps {
 export interface PostListProps {
     posts: Post[]
 }
+
+export interface ReviewPageParams {
+    params: {
+        id: string
+    }
+}
+
+export interface SuggestedReadingsProps {
+    heading: string
+}

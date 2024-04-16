@@ -75,8 +75,8 @@ export const HIGHLIGHTED_POSTS = [
         createdAt: "06/04/24",
         type: PostType.column,
         title: "La Crisis Política de la Derecha es la Crisis del Sistema del Capital",
-        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y..."
-        , href: "/columna"
+        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y...",
+        href: "/columna"
     },
     {
         id: "2",
@@ -145,7 +145,7 @@ export const LINKS = [
         href: "/lectura-critica",
         sublinks: [
             {
-                href: "/lectura-critica/columna-praxis",
+                href: "/lectura-critica/columna",
                 title: " Columna Praxis",
                 type: "link"
             },
@@ -155,8 +155,8 @@ export const LINKS = [
                 type: "link"
             },
             {
-                href: "/lectura-critica/reseñas",
-                title: " Reseñas",
+                href: "/lectura-critica/reviews",
+                title: "Reseñas",
                 type: "link"
             },
         ],
@@ -244,7 +244,7 @@ export const READING_INDEX_LINKS = [
     {
         label: "Reseñas",
         image: reseñas,
-        href: "/reseñas"
+        href: "/reviews"
     }
 
 ]

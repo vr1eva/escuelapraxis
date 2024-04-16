@@ -16,7 +16,7 @@ export default function Breadcrumb() {
                 </div>
                 <span>Inicio</span>
             </Link>
-            {pathname.split("/").slice(1).map((path, index, paths) => (
+            {pathname.split("/").slice(1, 3).map((path, index, paths) => (
                 <div key={path} className="flex items-center gap-[8px]">
                     <Image alt="breadcrumb chevron" src={chevronRight} width={24} height={24} />
                     <Link className="flex gap-1 capitalize text-[14px] leading-[169%] -tracking-[1%] font-light" href={index === 1 ? paths[1] : "" + "/" + path}>{path.split("-").map(segment => <span key={segment}>{segment}</span>)}</Link>
