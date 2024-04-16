@@ -11,8 +11,8 @@ export default function Footer() {
         sections: FOOTER_SECTIONS,
         news: FOOTER_NEWS
     }
-    return <>
-        <footer className=" bg-[#1e1e1e] p-[32px_48px_39px] flex h-[462px] mt-[260px]">
+    return <div className="bg-[#1e1e1e]">
+        <footer className="  p-[32px_48px_39px] flex h-[462px] mt-[260px] max-w-[1344px] mx-auto">
             <div className="max-w-[536px]">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>
@@ -47,6 +47,9 @@ export default function Footer() {
                 </div>
             </div>
         </footer>
-        <Separator />
-    </>
+        <div className="flex flex-col">
+            <Separator className="max-w-[1344px] mx-auto" />
+            <p className="text-center text-white py-[39px]">EFP Praxis 2024</p>
+        </div>
+    </div>
 }

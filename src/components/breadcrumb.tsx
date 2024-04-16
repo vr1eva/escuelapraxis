@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function Breadcrumb() {
     const pathname = usePathname()
     return (
-        <div className="flex items-center gap-[8px] m-[32px_40px]">
+        <div className="flex items-center gap-[8px] m-[32px_40px] max-w-[1344px] mx-auto">
 
             <Link className="text-[14px] leading-[169%] -tracking-[1%] font-light flex gap-[8px]" href="/">
                 <div className="shrink-0">
