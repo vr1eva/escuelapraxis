@@ -12,7 +12,7 @@ export default function Footer() {
         news: FOOTER_NEWS
     }
     return <div className="bg-[#1e1e1e]">
-        <footer className="  p-[32px_48px_39px] flex h-[462px] mt-[260px] max-w-[1344px] mx-auto">
+        <footer className=" p-[32px_48px_39px] flex h-[462px] mt-[110px] max-w-[1344px] mx-auto">
             <div className="max-w-[536px]">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>
@@ -24,7 +24,7 @@ export default function Footer() {
                     ))}
                 </ul>
             </div>
-            <div className="flex gap-[40px] ml-auto">
+            <div className="flex gap-[40px] ml-auto pt-[33px]">
                 <div>
                     <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Secciones</h6>
                     <ul className="pl-[16px] flex flex-col gap-y-[20px] mt-4 max-w-[148px]">

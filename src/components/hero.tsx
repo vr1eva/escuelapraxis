@@ -20,7 +20,9 @@ export default function Hero() {
                 <TypographyBodyRegular className="mt-[16px]">{content.paragraph}</TypographyBodyRegular>
                 <Button className="rounded-none mt-[32px]">{content.cta}</Button>
             </div>
-            <Image alt="personas protestando de forma pacífica" src={heroImage} width={565} height={382} />
+            <div className="shrink-0">
+                <Image alt="personas protestando de forma pacífica" src={heroImage} width={565} height={382} />
+            </div>
         </section>
     )
 }

@@ -12,7 +12,7 @@ import PostList from "@/components/post-list"
 
 export default function Page() {
     return (
-        <main className="min-h-screen mt-[24px]">
+        <main className="min-h-screen">
             <Banner image={lecturaCritica} />
             <Index />
             <Separator className="max-w-[1160px] mx-auto mt-[101px]" />

@@ -46,9 +46,6 @@ const ListItem = React.forwardRef<
                     {...props}
                 >
                     <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {children}
-                    </p>
                 </a>
             </NavigationMenuLink>
         </li>
@@ -62,8 +59,8 @@ function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
         return (
             <NavigationMenuItem>
                 <NavigationMenuTrigger><Link href={href}><TypographyNavbarLink className={pathname.includes(href) ? "font-black" : ""}>{title}</TypographyNavbarLink></Link></NavigationMenuTrigger>
-                <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[800px] lg:grid-cols-[.75fr_1fr]  z-200">
+                <NavigationMenuContent className="relative">
+                    <ul className="flex flex-col p-[8px] w-[180px] lg:grid-cols-[.75fr_1fr]  z-200  text-center">
                         {sublinks.map(link => (
                             <ListItem key={link.href} href={link.href} title={link.title}>
                                 {link.title}
