@@ -68,7 +68,7 @@ export const HIGHLIGHTED_BOOKS = [
     },
 ]
 
-export const POSTS = [
+export const HIGHLIGHTED_POSTS = [
     {
         id: "1",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
@@ -98,6 +98,36 @@ export const POSTS = [
     },
 ]
 
+export const HIGHLIGHTED_ARTICLES = [
+    {
+        id: "1",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
+        createdAt: "06/04/24",
+        type: PostType.article,
+        title: "La Crisis Política de la Derecha es la Crisis del Sistema del Capital",
+        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y",
+        href: "/columna"
+    },
+    {
+        id: "2",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291514/derecha_fq5fnl.png",
+        createdAt: "23/01/24",
+        type: PostType.article,
+        title: "La Derecha y su Callejón sin Salida",
+        description: "El siguiente texto «Tesis sobre Feuerbach» es una serie de notas elaboradas por Carlos Marx en 1845 y que fueron publicadas por primera vez por Federico Engels como apéndice de su folleto «Ludwig Feuerbach y el fin de la filosofía clásica alemana» en 1888, señalando que estas son los principales escritos donde se encuentra el germen de la nueva concepción materialista",
+        href: "/reseña"
+    },
+    {
+        id: "3",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291510/tarea_ba0fso.png",
+        createdAt: "18/12/23",
+        type: PostType.article,
+        title: `Nuestra tarea: Asamblea Popular Constituyente`,
+        description: "El siguiente texto «Tesis sobre Feuerbach» es una serie de notas elaboradas por Carlos Marx en 1845 y que fueron publicadas por primera vez por Federico Engels como apéndice de su folleto «Ludwig Feuerbach y el fin de la filosofía clásica alemana» en 1888, señalando que estas son los principales escritos donde se encuentra el germen de la nueva concepción materialista",
+        href: "/reseña"
+    },
+]
+
 export const LINKS = [
     {
         href: "/",
@@ -115,17 +145,17 @@ export const LINKS = [
         href: "/lectura-critica",
         sublinks: [
             {
-                href: "/columna-praxis",
+                href: "/lectura-critica/columna-praxis",
                 title: " Columna Praxis",
                 type: "link"
             },
             {
-                href: "/articulos",
+                href: "/lectura-critica/articulos",
                 title: " Artículos",
                 type: "link"
             },
             {
-                href: "/reseñas",
+                href: "/lectura-critica/reseñas",
                 title: " Reseñas",
                 type: "link"
             },
@@ -140,35 +170,6 @@ export const LINKS = [
 ]
 
 
-export const HIGHLIGHTED_POSTS = [
-    {
-        createdAt: "06/04/24",
-        id: "1",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712939249/marx_oj7qe7.png",
-        type: PostType.review,
-        title: "Miseria de la Filosofía - Carlos Marx",
-        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y..."
-        , href: "/reseña"
-    },
-    {
-        createdAt: "06/04/24",
-        id: "2",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712939250/article_sgu5ks.png",
-        type: PostType.column,
-        title: "La Crisis Política de la Derecha es...",
-        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y..."
-        , href: "/columna-praxis"
-    },
-    {
-        createdAt: "06/04/24",
-        id: "3",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712939250/praxiscoluim_n_ydnwor.png",
-        type: PostType.article,
-        title: "Análisis Crítico",
-        description: "Escrita por Karl Marx en 1847, es una respuesta a la «Filosofía de la miseria» de Pierre Proudhon. Esta respuesta se encuentra dentro de un proceso de desarrollo del trabajo académico de Marx, en el que su crítica a la economía política iba estructurándose y..."
-        , href: "/articulo"
-    },
-]
 
 
 

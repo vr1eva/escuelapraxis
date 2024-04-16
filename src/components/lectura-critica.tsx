@@ -30,8 +30,8 @@ function PostThumbnail({ post }: PostThumbnailProps) {
         <article className="first:pl-0 px-[37px] last:pr-0 border-r-[1px] last:border-none border-[#D4D2CF] flex flex-col">
             <Image src={post.coverUrl} width={336} height={225} alt={`cover for ${post.title}`} />
             <TypographyBodyBold className="mt-[12px] text-red">{post.type}</TypographyBodyBold>
-            <TypographyTitle className="mt-[4px]">{post.title}</TypographyTitle>
-            <TypographyBodyLight className="max-w-[337px] max-h[168px]">{post.description}<TypographyLink className="inline">Seguir leyendo</TypographyLink></TypographyBodyLight>
+            <TypographyTitle className="mt-[4px] truncate max-w-[337px]">{post.title}</TypographyTitle>
+            <TypographyBodyLight className="max-w-[337px] text-ellipsis overflow-hidden">{post.description}<TypographyLink className="inline">Seguir leyendo</TypographyLink></TypographyBodyLight>
         </article>
 
     )

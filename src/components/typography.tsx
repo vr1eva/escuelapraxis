@@ -63,10 +63,3 @@ export function TypographyNavbarLink({ children, className }: TypographyProps) {
         <span className={cn("font-noto font-normal text-[18px]", className)}>{children}</span>
     )
 }
-
-export interface SectionHeadingProps {
-    text: string
-}
-
-
-// ice t freindshipo lvl of companionship

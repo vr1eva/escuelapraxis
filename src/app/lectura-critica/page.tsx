@@ -7,7 +7,8 @@ import Link from "next/link"
 import { READING_INDEX_LINKS } from "@/assets/constants"
 import { IndexLinkProps, PostPreviewProps } from "@/types"
 import { Separator } from "@/components/ui/separator"
-import { POSTS } from "@/assets/constants"
+import { HIGHLIGHTED_POSTS } from "@/assets/constants"
+import PostList from "@/components/post-list"
 
 export default function Page() {
     return (
@@ -20,34 +21,14 @@ export default function Page() {
     )
 }
 
-function PostPreview({ post }: PostPreviewProps) {
-    return <article className="flex gap-8 items-center">
-        <div className="w-[338px] shrink-0">
-            <Image width={338} height={229} className="image-cover" src={post.coverUrl} alt={`article preview for ${post.title}`} />
-        </div>
-        <div className="py-[17.5px]">
-            <TypographySubtitle>{post.createdAt}</TypographySubtitle>
-            <TypographyTitle className="mt-[5px]">{post.type}</TypographyTitle>
-            <TypographyH2 className="mt-1">{post.title}</TypographyH2>
-            <TypographyBodyRegular className="mt-4">{post.description}<Link href={post.href}><TypographyLink className="inline text-red underline">Seguir leyendo</TypographyLink></Link></TypographyBodyRegular>
-        </div>
-    </article>
-}
-
 function Novedades() {
     return (
         <section className="max-w-[1160px] mx-auto">
-            <TypographyH2 className="mt-[8px]">Novedades</TypographyH2>
-            <div className="mt-8">
-                {POSTS.map(post => (
-                    <PostPreview post={post} key={post.title} />
-                ))}
-            </div>
+            <TypographyH2 className="mt-[8px] mb-8">Novedades</TypographyH2>
+            <PostList posts={HIGHLIGHTED_POSTS} />
         </section>
     )
 }
-
-
 
 function Index() {
     const content = {

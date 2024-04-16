@@ -91,3 +91,11 @@ export interface BookListProps {
     books: Book[],
     heading: string
 }
+
+export interface PageHeadingProps {
+    children: ReactNode
+}
+
+export interface PostListProps {
+    posts: Post[]
+}
