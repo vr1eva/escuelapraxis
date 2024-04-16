@@ -14,7 +14,7 @@ export default function LecturaCritica() {
             <Separator className="max-w-[1160px] w-full mx-auto mb-[8px]" />
             <div className="flex max-w-[1160px] w-full mx-auto justify-between">
                 <TypographyH2>{content.heading}</TypographyH2>
-                <Link href="/libros"><TypographyBodyBold className="text-red p-[10px_20px]">Ver más</TypographyBodyBold></Link>
+                <Link href="/nuestros-libros"><TypographyBodyBold className="text-red p-[10px_20px]">Ver más</TypographyBodyBold></Link>
             </div>
             <ul className="flex justify-center mt-[32px]">
                 {HIGHLIGHTED_POSTS.map(post => (

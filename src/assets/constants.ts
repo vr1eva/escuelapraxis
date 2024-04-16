@@ -6,6 +6,68 @@ import columna from "@/assets/columna.png"
 import reseñas from "@/assets/reseñas.png"
 import { PostType } from "@/types"
 
+export const BIOGRAPHY_BOOKS = [
+    {
+        id: "1",
+        title: "Comandante Luis de La Puente Uceda - MIR",
+        author: "Confluencia",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/luis_btfq96.png",
+        price: "S/12"
+    },
+    {
+        id: "2",
+        title: "Liberando la vida: La revolución de las mujeres",
+        author: "Abdullah Öcalan",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/liber_txy0cz.png",
+        price: "S/15"
+    },
+    {
+        id: "3",
+        title: "Feminismo Socialista y Revolución",
+        author: "Alexandra Kollontái",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/feminismo_osvciw.png",
+        price: "S/15"
+    },
+    {
+        id: "4",
+        title: "Manifiesto del Partido Comunista",
+        author: "Carlos Marx y Federico Engels",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/manifesto_z0mqww.png",
+        price: "S/20"
+    },
+]
+
+export const HIGHLIGHTED_BOOKS = [
+    {
+        id: "1",
+        title: "Lenin: la pregunta del viento",
+        author: "Néstor Kohan",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/fsehvvcyeli5yr22miaz.png",
+        price: "S/20"
+    },
+    {
+        id: "2",
+        title: "Huaycán: Mito del Cambio Social",
+        author: "Jaime Lastra",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zftxtjftsgd1mu3pdngu.png",
+        price: "S/15"
+    },
+    {
+        id: "3",
+        title: "Chimbote en la Memoria",
+        author: "Luis Apau - Alberto Gálvez",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zcogltsufzz6tzyzejom.png",
+        price: "S/25"
+    },
+    {
+        id: "4",
+        title: "El Primado de las Fuerzas Productivas y el Socialismo",
+        author: "Cristian Gillen",
+        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/simedxo8izjxjeqd9cha.png",
+        price: "S/35"
+    },
+]
+
 export const POSTS = [
     {
         id: "1",
@@ -46,7 +108,7 @@ export const LINKS = [
         title: "Sobre Nosotros"
     },
     {
-        href: "/libros",
+        href: "/nuestros-libros",
         title: "Nuestros Libros"
     },
     {
@@ -108,6 +170,8 @@ export const HIGHLIGHTED_POSTS = [
     },
 ]
 
+
+
 export const FOOTER_SOCIAL_LINKS = [
     {
         href: "mailto:praxis@gmail.com",
@@ -138,7 +202,7 @@ export const FOOTER_SECTIONS = [
     },
     {
         label: `Nuestros libros`,
-        href: `/libros`
+        href: `/nuestros-libros`
     },
     {
         label: `Contacto`,

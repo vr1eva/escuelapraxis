@@ -82,3 +82,12 @@ export type IndexLink = {
 export interface IndexLinkProps {
     link: IndexLink
 }
+
+export interface BannerProps {
+    image: StaticImageData
+}
+
+export interface BookListProps {
+    books: Book[],
+    heading: string
+}

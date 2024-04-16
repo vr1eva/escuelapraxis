@@ -1,5 +1,6 @@
 import Image from "next/image"
 import lecturaCritica from "@/assets/lecturaCriticaBanner.png"
+import Banner from "@/components/banner"
 import { TypographyBodyLight, TypographyBodyRegular, TypographyH1, TypographyH2, TypographyLink, TypographySubtitle, TypographyTitle } from "@/components/typography"
 import reseñaKarlMarx from "@/assets/reseñaKarlMarx.png"
 import Link from "next/link"
@@ -11,7 +12,7 @@ import { POSTS } from "@/assets/constants"
 export default function Page() {
     return (
         <main className="min-h-screen mt-[24px]">
-            <Banner />
+            <Banner image={lecturaCritica} />
             <Index />
             <Separator className="max-w-[1160px] mx-auto mt-[101px]" />
             <Novedades />
@@ -46,13 +47,7 @@ function Novedades() {
     )
 }
 
-function Banner() {
-    return (
-        <div className="w-full">
-            <Image src={lecturaCritica} alt="libros abiertos" className="object-contain w-full" />
-        </div>
-    )
-}
+
 
 function Index() {
     const content = {
