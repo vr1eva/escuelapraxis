@@ -22,8 +22,8 @@ export default function Page() {
     }
 
     return (
-        <main className="pt-[112px] h-screen">
-            <section className="flex max-w-[1160px] mx-auto gap-[73px] p-[35px_0_0_0] items-start">
+        <main className="pt-[112px] min-h-screen">
+            <section className="flex max-w-[1160px] mx-auto gap-[73px] items-start">
                 <div className="max-w-[1160px] mx-auto flex flex-col gap-y-4">
                     <TypographyH1 className="border-l-2 pl-[11px] border-red pt-[2px]">{content.h1}</TypographyH1>
                     {content.whoWeAre.map(paragraph => (

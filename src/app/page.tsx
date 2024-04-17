@@ -6,7 +6,7 @@ import { HIGHLIGHTED_BOOKS } from "@/assets/constants"
 
 export default function Page() {
   return (
-    <main>
+    <main className="pb-[133px]">
       <Hero />
       <Separator className="max-w-[1160px] w-full mx-auto mb-[8px] mt-[112px]" />
       <BookList books={HIGHLIGHTED_BOOKS} heading="Nuestros Libros" />

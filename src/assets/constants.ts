@@ -59,28 +59,80 @@ export const BIOGRAPHY_BOOKS = [
         title: "Comandante Luis de La Puente Uceda - MIR",
         author: "Confluencia",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/luis_btfq96.png",
-        price: "S/12"
+        price: "S/12",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "2",
         title: "Liberando la vida: La revolución de las mujeres",
         author: "Abdullah Öcalan",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/liber_txy0cz.png",
-        price: "S/15"
+        price: "S/15",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "3",
         title: "Feminismo Socialista y Revolución",
         author: "Alexandra Kollontái",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/feminismo_osvciw.png",
-        price: "S/15"
+        price: "S/15",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "4",
         title: "Manifiesto del Partido Comunista",
         author: "Carlos Marx y Federico Engels",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/manifesto_z0mqww.png",
-        price: "S/20"
+        price: "S/20",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
 ]
 
@@ -90,28 +142,80 @@ export const HIGHLIGHTED_BOOKS = [
         title: "Lenin: la pregunta del viento",
         author: "Néstor Kohan",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/fsehvvcyeli5yr22miaz.png",
-        price: "S/20"
+        price: "S/20",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "2",
         title: "Huaycán: Mito del Cambio Social",
         author: "Jaime Lastra",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zftxtjftsgd1mu3pdngu.png",
-        price: "S/15"
+        price: "S/15",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "3",
         title: "Chimbote en la Memoria",
         author: "Luis Apau - Alberto Gálvez",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zcogltsufzz6tzyzejom.png",
-        price: "S/25"
+        price: "S/25",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
     {
         id: "4",
         title: "El Primado de las Fuerzas Productivas y el Socialismo",
         author: "Cristian Gillen",
         coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/simedxo8izjxjeqd9cha.png",
-        price: "S/35"
+        price: "S/35",
+        description: `Este libro narra y analiza el proceso histórico del
+        surgimiento del asentamiento humano Huaycán
+        en 1984, proceso popular que fue uno de los
+        más importantes y complejos en la ciudad de
+        Lima, tanto por el nivel de organización que
+        alcanzó y por el contexto de guerra interna que
+        vivía el país.`,
+        editorial: `Combatiente / Trinchera / EFP Praxis`,
+        language: `Castellano`,
+        pages: `96`,
+        dimensions: `21 cm × 14.5 cm`,
+        releaseDate: `2019`,
+        isbn: `978-612-47821-3-8`
     },
 ]
 

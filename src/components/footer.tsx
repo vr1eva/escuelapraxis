@@ -12,7 +12,7 @@ export default function Footer() {
         news: FOOTER_NEWS
     }
     return <div className="bg-[#1e1e1e]">
-        <footer className=" p-[32px_48px_39px] flex h-[462px] mt-[110px] max-w-[1344px] mx-auto">
+        <footer className=" p-[32px_48px_39px] flex h-[462px] max-w-[1344px] mx-auto">
             <div className="max-w-[536px]">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>

@@ -1,10 +1,13 @@
 import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 
+export interface BookDetailProps {
+    book: Book
+}
+
 export interface PostPreviewProps {
     post: Post
 }
-
 export interface NavbarItemProps {
     sublinks?: NavbarLinkItem[],
     title: string,
@@ -36,6 +39,13 @@ export type Book = {
     coverUrl: string,
     author: string,
     price: string,
+    description: string,
+    editorial: string,
+    language: string,
+    pages: string,
+    dimensions: string,
+    releaseDate: string,
+    isbn: string,
 }
 
 export interface BookThumbnailProps {
