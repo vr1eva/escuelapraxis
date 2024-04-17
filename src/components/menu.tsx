@@ -60,7 +60,7 @@ function NavbarItem({ sublinks, href, title }: NavbarItemProps) {
             <NavigationMenuItem>
                 <NavigationMenuTrigger><Link href={href}><TypographyNavbarLink className={pathname.includes(href) ? "font-black" : ""}>{title}</TypographyNavbarLink></Link></NavigationMenuTrigger>
                 <NavigationMenuContent className="relative">
-                    <ul className="flex flex-col p-[8px] w-[180px] lg:grid-cols-[.75fr_1fr]  z-200  text-center">
+                    <ul className="flex flex-col p-[8px] w-[180px] lg:grid-cols-[.75fr_1fr] z-200">
                         {sublinks.map(link => (
                             <ListItem key={link.href} href={link.href} title={link.title}>
                                 {link.title}
