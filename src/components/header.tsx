@@ -10,8 +10,8 @@ export default function Header() {
             <Link href="/" className="shrink-0">
                 <Image alt="logo" src={logo} width={62} height={83} />
             </Link>
-            <Menu className="ml-auto" />
-            <SearchForm className="pl-[155px]" />
+            <Menu />
+            <SearchForm />
         </header>
     )
 }

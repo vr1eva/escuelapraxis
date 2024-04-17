@@ -20,8 +20,8 @@ import { TypographyNavbarLink } from "@/components/typography"
 
 export default function Menu({ className }: MenuProps) {
     return (
-        <NavigationMenu className={className}>
-            <NavigationMenuList className="flex gap-[32px]">
+        <NavigationMenu className={cn(" w-full mx-auto", className)}>
+            <NavigationMenuList className="flex gap-[32px] items-center  justify-center">
                 {LINKS.map(link => (
                     <NavbarItem sublinks={link.sublinks} href={link.href} title={link.title} key={link.href} />
                 ))}
