@@ -4,7 +4,7 @@ import Breadcrumb from "@/components/breadcrumb";
 import PageHeading from "@/components/page-heading";
 import { TypographyBodyRegular } from "@/components/typography";
 import PostList from "@/components/post-list"
-import { HIGHLIGHTED_ARTICLES } from "@/assets/constants";
+import { HIGHLIGHTED_ARTICLES, REVIEW_BREADCRUMB } from "@/assets/constants";
 
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
     return (
         <main>
             <Banner image={nuestrosLibros} />
-            <Breadcrumb />
+            <Breadcrumb segments={REVIEW_BREADCRUMB} />
             <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px]">
                 <PageHeading>{content.heading}</PageHeading>
                 <TypographyBodyRegular>{content.paragraph}</TypographyBodyRegular>

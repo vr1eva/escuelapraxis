@@ -37,12 +37,12 @@ export default function Page() {
             </section>
             <section className="flex gap-[142px] max-w-[1160px] mx-auto mt-[77px] pb-[161px]">
                 <div className="w-[505px] flex flex-col gap-4">
-                    <SectionHeading text="¿Qué buscamos?" />
+                    <SectionHeading >¿Qué buscamos?</SectionHeading>
                     <TypographyBodyRegular>{content.search}</TypographyBodyRegular>
                 </div>
 
                 <div className="w-[505px] flex flex-col gap-4">
-                    <SectionHeading text="¿Qué hacemos?" />
+                    <SectionHeading>¿Qué hacemos?</SectionHeading>
                     <TypographyBodyRegular>{content.mission}</TypographyBodyRegular>
                 </div>
             </section>
