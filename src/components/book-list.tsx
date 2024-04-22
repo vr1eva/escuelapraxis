@@ -22,7 +22,7 @@ export default function BookList({ books, heading }: BookListProps) {
 function BookThumnbail({ book }: BookThumbnailProps) {
     return (
         <Link href={`/book/${book.id}`} key={book.title} className="p-[24px_22px_8px] flex flex-col items-center gap-[20px]">
-            <Image src={book.coverUrl} width={208} height={274} alt={` cover of ${book.title}`} />
+            <Image src={book.cover} width={208} height={274} alt={` cover of ${book.title}`} />
             <div className="max-w-[241px] text-center">
                 <TypographySubtitle >{book.title}</TypographySubtitle>
                 <TypographyBodyLight >{book.author}</TypographyBodyLight>

@@ -1,7 +1,5 @@
 "use client"
 
-import Banner from "@/components/banner";
-import nuestrosLibros from "@/assets/nuestrosLibros.png";
 import Breadcrumb from "@/components/breadcrumb";
 import PageHeading from "@/components/page-heading";
 import { TypographyBodyRegular } from "@/components/typography";
@@ -15,7 +13,6 @@ export default function Page() {
     }
     return (
         <main>
-            <Banner image={nuestrosLibros} />
             <Breadcrumb segments={COLUMN_BREADCRUMB} />
             <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px]">
                 <PageHeading>{content.heading}</PageHeading>

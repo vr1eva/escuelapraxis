@@ -1,6 +1,6 @@
 import Image from "next/image"
 import logoWithBrand from "@/assets/logoWithBrand.png"
-import { TypographyBodyLight } from "./typography"
+import { TypographyBodyLight, TypographyHighlight } from "./typography"
 import { FOOTER_SOCIAL_LINKS, FOOTER_SECTIONS, FOOTER_NEWS } from "@/assets/constants"
 import Link from "next/link"
 import { Separator } from "./ui/separator"
@@ -12,7 +12,7 @@ export default function Footer() {
         news: FOOTER_NEWS
     }
     return <div className="bg-[#1e1e1e]">
-        <footer className=" p-[32px_48px_39px] flex h-[462px] max-w-[1344px] mx-auto">
+        <footer className=" p-[32px_48px_39px] flex h-[462px] max-w-[1440px] mx-auto">
             <div className="max-w-[536px]">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
             <div className="flex gap-[40px] ml-auto pt-[33px]">
                 <div>
-                    <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Secciones</h6>
+                    <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Menú</h6>
                     <ul className="pl-[16px] flex flex-col gap-y-[20px] mt-4 max-w-[148px]">
                         {FOOTER_SECTIONS.map(section => (
                             <li key={section.label}>
@@ -49,7 +49,10 @@ export default function Footer() {
         </footer>
         <div className="flex flex-col">
             <Separator className="max-w-[1344px] mx-auto" />
-            <p className="text-center text-white py-[39px] font-bold text-[16px] leading-[150%] -tracking-[1%]">EFP Praxis 2024</p>
+            <div className="flex justify-between max-w-[1344px] w-full mx-auto p-[28px_0_32px]">
+                <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">© EFP Praxis 2024</p>
+                <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">Diseñado por <TypographyHighlight>Andrómeda</TypographyHighlight></p>
+            </div>
         </div>
     </div>
 }

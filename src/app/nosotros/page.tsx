@@ -1,6 +1,8 @@
 import { TypographyBodyRegular, TypographyH1, TypographyH2 } from "@/components/typography";
 import Image from "next/image"
-import nosotros from "@/assets/nosotros.png"
+import quienesSomos from "@/assets/quienesSomos.png"
+import queBuscamos from "@/assets/queBuscamos.png"
+import quehacemos from "@/assets/quehacemos.png"
 import quoteBackground from "@/assets/quoteBackground.png"
 import { QuoteProps } from "@/types"
 import SectionHeading from "@/components/section-heading";
@@ -22,30 +24,40 @@ export default function Page() {
     }
 
     return (
-        <main className="pt-[112px] min-h-screen">
-            <section className="flex max-w-[1160px] mx-auto gap-[73px] items-start">
-                <div className="max-w-[1160px] mx-auto flex flex-col gap-y-4">
-                    <TypographyH1 className="border-l-2 pl-[11px] border-red pt-[2px]">{content.h1}</TypographyH1>
-                    {content.whoWeAre.map(paragraph => (
-                        <TypographyBodyRegular key={paragraph[0]}>{paragraph}</TypographyBodyRegular>
-                    ))}
-
+        <main className="pt-[56px] min-h-screen">
+            <section className="flex flex-col max-w-[1160px] mx-auto gap-[56px] pb-[96px]">
+                <div className="flex gap-[73px]">
+                    <div className="mx-auto flex flex-col gap-y-4">
+                        <TypographyH1 className="border-l-2 pl-[11px] w-full border-red pt-[2px]">{content.h1}</TypographyH1>
+                        {content.whoWeAre.map(paragraph => (
+                            <TypographyBodyRegular key={paragraph[0]}>{paragraph}</TypographyBodyRegular>
+                        ))}
+                    </div>
+                    <div className="relative shrink-0 border-red border-2 w-[488px] h-[331px]">
+                        <Image className="w-full absolute  right-[33px] top-[35px]" src={quienesSomos} width={488} height={331} alt="picture of activists" />
+                    </div>
                 </div>
-                <div className="relative shrink-0 border-red border-2 w-[488px] h-[331px]">
-                    <Image className="w-full absolute  right-[33px] top-[35px]" src={nosotros} width={488} height={331} alt="picture of a panel of writers" />
+                <div className="flex gap-[39px] items-center">
+                    <div className="shrink-0">
+                        <Image src={queBuscamos} width={522} height={354} alt="picture of a panel of writers" />
+                    </div>
+                    <div className="w-full flex flex-col gap-4">
+                        <SectionHeading>¿Qué buscamos?</SectionHeading>
+                        <TypographyBodyRegular>{content.search}</TypographyBodyRegular>
+                    </div>
+                </div>
+                <div className="flex gap-[39px] items-center">
+                    <div className="w-full flex flex-col gap-4">
+                        <SectionHeading>¿Qué hacemos?</SectionHeading>
+                        <TypographyBodyRegular>{content.mission}</TypographyBodyRegular>
+
+                    </div>
+                    <div className="shrink-0">
+                        <Image src={queBuscamos} width={522} height={354} alt="picture of the organization in La Feria Internacional del Libro edition 26" />
+                    </div>
                 </div>
             </section>
-            <section className="flex gap-[142px] max-w-[1160px] mx-auto mt-[77px] pb-[161px]">
-                <div className="w-[505px] flex flex-col gap-4">
-                    <SectionHeading >¿Qué buscamos?</SectionHeading>
-                    <TypographyBodyRegular>{content.search}</TypographyBodyRegular>
-                </div>
 
-                <div className="w-[505px] flex flex-col gap-4">
-                    <SectionHeading>¿Qué hacemos?</SectionHeading>
-                    <TypographyBodyRegular>{content.mission}</TypographyBodyRegular>
-                </div>
-            </section>
             <Quote quote={content.quote} />
         </main>
     )

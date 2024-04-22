@@ -52,14 +52,21 @@ export function TypographyBodyBold({ children, className }: TypographyProps) {
     )
 }
 
+export const typographyBodyRegularClassNames = `font-sans font-normal text-[16px] leading-[169%] -tracking-[1%]`
 export function TypographyBodyRegular({ children, className }: TypographyProps) {
     return (
-        <p className={cn("font-sans font-normal text-[16px] leading-[169%] -tracking-[1%]", className)}>{children}</p>
+        <p className={cn(typographyBodyRegularClassNames, className)}>{children}</p>
     )
 }
 
 export function TypographyNavbarLink({ children, className }: TypographyProps) {
     return (
-        <span className={cn("font-noto font-normal text-[18px]", className)}>{children}</span>
+        <span className={cn("font-noto text-[18px]", className)}>{children}</span>
+    )
+}
+
+export function TypographyHighlight({ children }: TypographyProps) {
+    return (
+        <span className="font-bold text-red">{children}</span>
     )
 }

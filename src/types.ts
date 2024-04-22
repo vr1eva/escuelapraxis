@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
+import { PortableTextBlock } from "next-sanity";
 
 export interface BookDetailProps {
     book: Book
@@ -36,7 +37,7 @@ export interface SearchFormProps {
 export type Book = {
     id: string,
     title: string,
-    coverUrl: string,
+    cover: string,
     author: string,
     price: string,
     description: string,
@@ -46,6 +47,8 @@ export type Book = {
     dimensions: string,
     releaseDate: string,
     isbn: string,
+    slug: string
+    group: string
 }
 
 export interface BookThumbnailProps {
@@ -103,7 +106,8 @@ export interface BookListProps {
 }
 
 export interface PageHeadingProps {
-    children: ReactNode
+    children: ReactNode,
+    className?: string
 }
 
 export interface PostListProps {
@@ -127,4 +131,25 @@ export interface BreadcrumbProps {
 export type Segment = {
     href: string,
     title: string
+}
+
+
+export type Project = {
+    _id: string,
+    _createdAt: Date;
+    name: string,
+    slug: string,
+    image: string,
+    url: string,
+    content: PortableTextBlock[]
+}
+
+export interface ProjectPageParams {
+    params: {
+        project: string
+    }
+}
+
+export interface GetBooksArgs {
+    group: string
 }
