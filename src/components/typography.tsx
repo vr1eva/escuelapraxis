@@ -65,8 +65,8 @@ export function TypographyNavbarLink({ children, className }: TypographyProps) {
     )
 }
 
-export function TypographyHighlight({ children }: TypographyProps) {
+export function TypographyHighlight({ children, className }: TypographyProps) {
     return (
-        <span className="font-bold text-red">{children}</span>
+        <span className={cn("font-bold text-red", className)}>{children}</span>
     )
 }

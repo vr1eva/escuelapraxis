@@ -1,14 +1,62 @@
 import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
-import { PortableTextBlock } from "next-sanity";
+import { PortableTextBlock, PortableTextBlockComponent } from "next-sanity";
 
+export interface PostDetailProps {
+    post: Post
+
+}
+
+
+export interface PostTypeProps {
+    type: string,
+    className?: string,
+    isVertical: boolean
+}
+
+
+export type Post = {
+    _createdAt: string,
+    _title: string,
+    _type: string,
+    id: string,
+    cover: string,
+    title: string,
+    content: PortableTextBlock,
+    slug: string,
+}
+
+export type Article = Post
+
+export type Review = Post
+
+export type ColumnEntry = Post
+
+export interface ArticlePageParams {
+    params: {
+        slug: string
+    }
+}
+
+
+export interface BookContainerProps {
+    books: Book[]
+}
+
+export interface BookPageParams {
+    params: {
+        id: string
+    }
+}
+
+export interface GetBooksArgs {
+    tag: string
+}
 export interface BookDetailProps {
     book: Book
 }
 
-export interface PostPreviewProps {
-    post: Post
-}
+
 export interface NavbarItemProps {
     sublinks?: NavbarLinkItem[],
     title: string,
@@ -23,7 +71,7 @@ export type NavbarLinkItem = {
 
 export interface TypographyProps {
     children: ReactNode,
-    className?: string
+    className?: string,
 }
 
 export interface MenuProps {
@@ -39,17 +87,18 @@ export type Book = {
     title: string,
     cover: string,
     author: string,
-    price: string,
-    description: string,
+    price: number,
+    description: PortableTextBlock[],
     editorial: string,
     language: string,
     pages: string,
     dimensions: string,
     releaseDate: string,
     isbn: string,
-    slug: string
-    group: string
+    category: string,
+    url: string
 }
+
 
 export interface BookThumbnailProps {
     book: Book
@@ -60,17 +109,6 @@ export enum PostType {
     column = "Columna Praxis",
     article = "Artículo"
 }
-
-export type Post = {
-    createdAt: string,
-    id: string,
-    coverUrl: string,
-    type: PostType
-    title: string,
-    description: string,
-    href: string
-}
-
 export interface PostThumbnailProps {
     post: Post
 }
@@ -111,7 +149,14 @@ export interface PageHeadingProps {
 }
 
 export interface PostListProps {
-    posts: Post[]
+    posts: Post[],
+    heading: string,
+    orientation?: string
+}
+
+export interface PostPreviewProps {
+    post: Post,
+    orientation?: string
 }
 
 export interface ReviewPageParams {
@@ -150,6 +195,3 @@ export interface ProjectPageParams {
     }
 }
 
-export interface GetBooksArgs {
-    group: string
-}

@@ -16,9 +16,9 @@ export default function Breadcrumb({ segments }: BreadcrumbProps) {
                 <span>Inicio</span>
             </Link>
             {segments.map((segment) => (
-                <div key={segment.href} className="flex items-center gap-[8px]">
+                <div key={segment.href} className="flex items-center gap-[8px] font-light last:font-bold">
                     <Image alt="breadcrumb chevron" src={chevronRight} width={24} height={24} />
-                    <Link className="flex gap-1 capitalize text-[14px] leading-[169%] -tracking-[1%] font-light" href={segment.href}>{segment.title}</Link>
+                    <Link className="flex gap-1 capitalize text-[14px] leading-[169%] -tracking-[1%] font-inherit " href={segment.href}>{segment.title}</Link>
                 </div>
             ))}
         </div>

@@ -58,7 +58,8 @@ export const BIOGRAPHY_BOOKS = [
         id: "1",
         title: "Comandante Luis de La Puente Uceda - MIR",
         author: "Confluencia",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/luis_btfq96.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/luis_btfq96.png",
+        group: "recomendados",
         price: "S/12",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -78,7 +79,8 @@ export const BIOGRAPHY_BOOKS = [
         id: "2",
         title: "Liberando la vida: La revolución de las mujeres",
         author: "Abdullah Öcalan",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/liber_txy0cz.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/liber_txy0cz.png",
+        group: "recomendados",
         price: "S/15",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -98,7 +100,8 @@ export const BIOGRAPHY_BOOKS = [
         id: "3",
         title: "Feminismo Socialista y Revolución",
         author: "Alexandra Kollontái",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/feminismo_osvciw.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/feminismo_osvciw.png",
+        group: "recomendados",
         price: "S/15",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -118,7 +121,8 @@ export const BIOGRAPHY_BOOKS = [
         id: "4",
         title: "Manifiesto del Partido Comunista",
         author: "Carlos Marx y Federico Engels",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/manifesto_z0mqww.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713288606/manifesto_z0mqww.png",
+        group: "recomendados",
         price: "S/20",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -141,7 +145,8 @@ export const HIGHLIGHTED_BOOKS = [
         id: "1",
         title: "Lenin: la pregunta del viento",
         author: "Néstor Kohan",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/fsehvvcyeli5yr22miaz.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/fsehvvcyeli5yr22miaz.png",
+        group: "recomendados",
         price: "S/20",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -161,7 +166,8 @@ export const HIGHLIGHTED_BOOKS = [
         id: "2",
         title: "Huaycán: Mito del Cambio Social",
         author: "Jaime Lastra",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zftxtjftsgd1mu3pdngu.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zftxtjftsgd1mu3pdngu.png",
+        group: "recomendados",
         price: "S/15",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -181,7 +187,8 @@ export const HIGHLIGHTED_BOOKS = [
         id: "3",
         title: "Chimbote en la Memoria",
         author: "Luis Apau - Alberto Gálvez",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zcogltsufzz6tzyzejom.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/zcogltsufzz6tzyzejom.png",
+        group: "recomendados",
         price: "S/25",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -201,7 +208,8 @@ export const HIGHLIGHTED_BOOKS = [
         id: "4",
         title: "El Primado de las Fuerzas Productivas y el Socialismo",
         author: "Cristian Gillen",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/simedxo8izjxjeqd9cha.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1712859889/simedxo8izjxjeqd9cha.png",
+        group: "recomendados",
         price: "S/35",
         description: `Este libro narra y analiza el proceso histórico del
         surgimiento del asentamiento humano Huaycán
@@ -222,7 +230,8 @@ export const HIGHLIGHTED_BOOKS = [
 export const HIGHLIGHTED_POSTS = [
     {
         id: "1",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
+        group: "recomendados",
         createdAt: "06/04/24",
         type: PostType.column,
         title: "La Crisis Política de la Derecha es la Crisis del Sistema del Capital",
@@ -231,7 +240,8 @@ export const HIGHLIGHTED_POSTS = [
     },
     {
         id: "2",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200454/mujeres_uzhvdt.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200454/mujeres_uzhvdt.png",
+        group: "recomendados",
         createdAt: "28/03/24",
         type: PostType.review,
         title: "Mujeres, clase y raza - Angela Davis",
@@ -240,7 +250,8 @@ export const HIGHLIGHTED_POSTS = [
     },
     {
         id: "3",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200452/mao_dnzmax.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200452/mao_dnzmax.png",
+        group: "recomendados",
         createdAt: "28/03/24",
         type: PostType.review,
         title: `"Acerca de la práctica" - Mao Tse-Tung`,
@@ -252,7 +263,8 @@ export const HIGHLIGHTED_POSTS = [
 export const HIGHLIGHTED_ARTICLES = [
     {
         id: "1",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713200428/crisis_hag5tb.png",
+        group: "recomendados",
         createdAt: "06/04/24",
         type: PostType.article,
         title: "La Crisis Política de la Derecha es la Crisis del Sistema del Capital",
@@ -261,7 +273,8 @@ export const HIGHLIGHTED_ARTICLES = [
     },
     {
         id: "2",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291514/derecha_fq5fnl.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291514/derecha_fq5fnl.png",
+        group: "recomendados",
         createdAt: "23/01/24",
         type: PostType.article,
         title: "La Derecha y su Callejón sin Salida",
@@ -270,7 +283,8 @@ export const HIGHLIGHTED_ARTICLES = [
     },
     {
         id: "3",
-        coverUrl: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291510/tarea_ba0fso.png",
+        cover: "https://res.cloudinary.com/dkzaozc1s/image/upload/v1713291510/tarea_ba0fso.png",
+        group: "recomendados",
         createdAt: "18/12/23",
         type: PostType.article,
         title: `Nuestra tarea: Asamblea Popular Constituyente`,

@@ -20,14 +20,23 @@ export default function BookList({ books, heading }: BookListProps) {
 }
 
 function BookThumnbail({ book }: BookThumbnailProps) {
+    const formattedPrice = new Intl.NumberFormat("es-PE", {
+        style: "currency",
+        currency: "PEN",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+    }).format(book.price);
     return (
-        <Link href={`/book/${book.id}`} key={book.title} className="p-[24px_22px_8px] flex flex-col items-center gap-[20px]">
-            <Image src={book.cover} width={208} height={274} alt={` cover of ${book.title}`} />
+        <Link href={`/nuestros-libros/${book.url}`} key={book.title} className="p-[24px_22px_8px] flex flex-col items-center gap-[20px]">
+            <div className="shrink-0 ">
+                <Image className="object-cover w-[208px] h-[274px]" src={book.cover} width={208} height={274} alt={` cover of ${book.title}`} />
+            </div>
             <div className="max-w-[241px] text-center">
                 <TypographySubtitle >{book.title}</TypographySubtitle>
                 <TypographyBodyLight >{book.author}</TypographyBodyLight>
-                <TypographyBodyBold className="p-[10px_20px] text-red">{book.price}</TypographyBodyBold>
+                <TypographyBodyBold className="p-[10px_20px] text-red">{formattedPrice}</TypographyBodyBold>
             </div>
         </Link>
     )
 }
+
