@@ -2,6 +2,15 @@ import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 import { PortableTextBlock, PortableTextBlockComponent } from "next-sanity";
 
+export interface HamburguerMenuItemProps {
+    link: NavbarItemProps,
+    className?: string
+}
+
+export interface HamburguerMenuDropdownProps {
+    link: NavbarItemProps
+}
+
 export interface ColumnPageParams {
     params: {
         slug: string
