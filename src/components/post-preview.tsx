@@ -16,7 +16,7 @@ export default function PostPreview({ post, orientation = "horizontal" }: PostPr
     const isVertical = orientation === "vertical"
     return <article className={cn("flex w-full", isVertical ? " items-start flex-col gap-[12px]" : "flex-row items-center  gap-8")}>
         <div className="w-[338px] shrink-0">
-            <Image width={338} height={229} className="image-cover" src={post.cover} alt={`post preview for ${post.title}`} />
+            <Image width={338} height={229} className="object-cover" src={post.cover} alt={`post preview for ${post.title}`} />
         </div>
         <div className="py-[17.5px]">
             {isVertical ? null : <TypographySubtitle> {parseDate(post._createdAt)}</TypographySubtitle>}

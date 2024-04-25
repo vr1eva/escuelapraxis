@@ -34,7 +34,7 @@ export default function Page() {
                         <Image width={24} height={24} src={instagram} alt="instagram logo" />
                     </div>
                 </div>
-                <div className="shrink-0 mt-[40px] bg-blend-lighten"><Image className="image-cover" src={cosecha} alt="cosecha" width={172} height={192} /> </div>
+                <div className="shrink-0 mt-[40px] bg-blend-lighten"><Image className="object-cover" src={cosecha} alt="cosecha" width={172} height={192} /> </div>
             </div>
             <div className="flex flex-col gap-[16px] pl-[79px] border-l border-l-light-gray">
                 <TypographyBodyRegular className="w-full">Compártenos tus datos para que podamos ponernos en contacto contigo.</TypographyBodyRegular>
