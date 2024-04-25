@@ -2,6 +2,7 @@ import { TypographyBodyBold, TypographyBodyLight, TypographyH2, TypographySubtit
 import Image from "next/image"
 import { BookListProps, BookThumbnailProps } from "@/types"
 import Link from "next/link"
+import { formatPrice } from "@/lib/utils"
 
 export default function BookList({ books, heading }: BookListProps) {
     return (
@@ -20,12 +21,6 @@ export default function BookList({ books, heading }: BookListProps) {
 }
 
 function BookThumnbail({ book }: BookThumbnailProps) {
-    const formattedPrice = new Intl.NumberFormat("es-PE", {
-        style: "currency",
-        currency: "PEN",
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-    }).format(book.price);
     return (
         <Link href={`/nuestros-libros/${book.url}`} key={book.title} className="p-[24px_22px_8px] flex flex-col items-center gap-[20px]">
             <div className="shrink-0 ">
@@ -34,7 +29,7 @@ function BookThumnbail({ book }: BookThumbnailProps) {
             <div className="max-w-[241px] text-center">
                 <TypographySubtitle >{book.title}</TypographySubtitle>
                 <TypographyBodyLight >{book.author}</TypographyBodyLight>
-                <TypographyBodyBold className="p-[10px_20px] text-red">{formattedPrice}</TypographyBodyBold>
+                <TypographyBodyBold className="p-[10px_20px] text-red">{formatPrice(book.price)}</TypographyBodyBold>
             </div>
         </Link>
     )

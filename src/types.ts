@@ -2,11 +2,15 @@ import { StaticImageData } from "next/image"
 import { ReactNode } from "react"
 import { PortableTextBlock, PortableTextBlockComponent } from "next-sanity";
 
+export interface ColumnPageParams {
+    params: {
+        slug: string
+    }
+}
 export interface PostDetailProps {
     post: Post
 
 }
-
 
 export interface PostTypeProps {
     type: string,
@@ -161,7 +165,7 @@ export interface PostPreviewProps {
 
 export interface ReviewPageParams {
     params: {
-        id: string
+        slug: string
     }
 }
 

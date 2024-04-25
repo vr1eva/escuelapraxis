@@ -7,18 +7,18 @@ import { TypographyBodyBold, TypographyBodyRegular, TypographyH3, TypographyTitl
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import BookList from "@/components/book-list";
-import { getBook, getBooks } from "@/lib/utils";
+import { formatPrice, getBook, getBooks } from "@/lib/utils";
 import { PortableText } from '@portabletext/react';
 
 export default async function Page({ params }: BookPageParams) {
     const bookData = getBook(params.id)
     const recommendedBooksData = getBooks("Recomendaciones")
     const [book, recommendedBooks] = await Promise.all([bookData, recommendedBooksData])
-    if (!book || !recommendedBooks) return <div>Loading,..</div>
+    if (!book || !recommendedBooks) return <div>Loading..</div>
 
     return (
         <>
-            <Breadcrumb segments={[...BOOKS_BREADCRUMB, { title: "Nuestros Libros", href: "/nuestros-libros/" + params.id }]} />
+            <Breadcrumb segments={[...BOOKS_BREADCRUMB, { title: book.title, href: book.url }]} />
             <main>
                 <BookDetail book={book} />
                 <Separator className="bg-black max-w-[1160px] mx-auto mb-[8px]" />
@@ -40,7 +40,7 @@ function BookDetail({ book }: BookDetailProps) {
                 <PortableText value={book.description} />
                 <div className="flex items-center mt-[24px]">
                     <TypographyBodyBold>Precio:</TypographyBodyBold>
-                    <p className="font-bold text-[20px] text-red leading-[150%] -tracking-[1%] ml-[8px]">{book.price}</p>
+                    <p className="font-bold text-[20px] text-red leading-[150%] -tracking-[1%] ml-[8px]">{formatPrice(book.price)}</p>
                     <Button className="ml-[16px]" variant="buy">Comprar libro</Button>
                 </div>
                 <div className="mt-[48px]">

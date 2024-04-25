@@ -6,6 +6,8 @@ import Link from "next/link"
 import { BreadcrumbProps } from "@/types"
 
 export default function Breadcrumb({ segments }: BreadcrumbProps) {
+    console.log(segments)
+
     return (
         <div className="flex items-center gap-[8px] m-[32px_40px] max-w-[1344px] mx-auto">
 

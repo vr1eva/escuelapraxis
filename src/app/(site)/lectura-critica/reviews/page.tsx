@@ -13,7 +13,6 @@ export default async function Page() {
     }
 
     const reviews = await getReviews()
-    console.log(reviews)
     return (
         <main className="mb-[96px] min-h-screen">
             <Breadcrumb segments={REVIEW_BREADCRUMB} />

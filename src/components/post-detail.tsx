@@ -4,6 +4,7 @@ import { TypographyTitle } from "./typography";
 import Image from "next/image";
 import { parseDate } from "@/lib/utils";
 import { PostDetailProps } from "@/types";
+import PostType from "./post-type";
 
 export default function PostDetail({ post }: PostDetailProps) {
     return (
@@ -11,7 +12,7 @@ export default function PostDetail({ post }: PostDetailProps) {
             <div className="max-w-[745px]">
                 <PageHeading className="max-w-[1160px] mx-auto">{post.title}</PageHeading>
                 <div className="max-w-[1160px] mx-auto mt-[8px] flex gap-[8px] mb-[32px]">
-                    <TypographyTitle>Columna Praxis</TypographyTitle>
+                    <PostType isVertical={false} type={post._type} />
                     <TypographyTitle className="text-gray">{parseDate(post._createdAt)}</TypographyTitle>
                 </div>
                 <PortableText value={post.content} />

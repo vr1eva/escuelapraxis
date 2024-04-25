@@ -74,6 +74,7 @@ export async function getArticles(): Promise<Article[]> {
     groq`*[_type == "article"]{
       _id,
       _createdAt,
+      _type,
       title,
       "slug": slug.current,
       "cover": cover.asset->url,
@@ -84,6 +85,7 @@ export async function getArticles(): Promise<Article[]> {
   )
 }
 export async function getArticle(slug: string): Promise<Article> {
+  console.log(slug)
   return createClient({
     projectId: 'of5r9k1p',
     dataset: 'production',
@@ -94,12 +96,12 @@ export async function getArticle(slug: string): Promise<Article> {
     groq`*[_type == "article" && slug.current == $slug][0]{
       _id,
       _createdAt,
+      _type,
       title,
       "slug": slug.current,
       "cover": cover.asset->url,
       content,
       tags,
-      content
     }`,
     { slug }
   )
@@ -112,10 +114,7 @@ export function parseDate(dateString: string) {
     month: '2-digit',
     day: '2-digit',
   });
-
 }
-
-
 export async function getColumnEntries(): Promise<ColumnEntry[]> {
   return createClient({
     projectId: 'of5r9k1p',
@@ -127,12 +126,12 @@ export async function getColumnEntries(): Promise<ColumnEntry[]> {
     groq`*[_type == "column"]{
       _id,
       _createdAt,
+      _type,
       title,
       "slug": slug.current,
       "cover": cover.asset->url,
       content,
       tags,
-      content
     }`
   )
 }
@@ -148,13 +147,34 @@ export async function getReviews(): Promise<ColumnEntry[]> {
     groq`*[_type == "review"]{
       _id,
       _createdAt,
+      _type,
       title,
       "slug": slug.current,
       "cover": cover.asset->url,
       content,
       tags,
-      content
     }`
+  )
+}
+export async function getReview(slug: string): Promise<Review> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: false
+  }).fetch<Article>(
+    groq`*[_type == "review"][0]{
+      _id,
+      _createdAt,
+      _type,
+      title,
+      "slug": slug.current,
+      "cover": cover.asset->url,
+      content,
+      tags,
+    }`,
+    { slug }
   )
 }
 
@@ -164,7 +184,7 @@ export async function getPosts(tagString: string): Promise<Post[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: false
+    useCdn: true
   }).fetch<Post[]>(
     groq`*[_type in ["review", "column", "article"] && $tagString in tags[]]{
       _id,
@@ -175,8 +195,28 @@ export async function getPosts(tagString: string): Promise<Post[]> {
       "cover": cover.asset->url,
       content,
       tags,
-      content
     }`,
     { tagString }
   )
+}
+
+export function resolvePostSegment(postType: string) {
+  let segment;
+  if (postType === "article") {
+    segment = "articulos"
+  } else if (postType === "column") {
+    segment = "columna"
+  } else {
+    segment = "reviews"
+  }
+  return segment
+}
+
+export function formatPrice(price: number) {
+  return new Intl.NumberFormat("es-PE", {
+    style: "currency",
+    currency: "PEN",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(price)
 }
