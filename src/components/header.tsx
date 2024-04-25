@@ -3,6 +3,7 @@ import SearchForm from "@/components/search-form"
 import logo from "@/assets/logo.svg"
 import Image from "next/image"
 import Link from "next/link"
+import HamburguerMenu from "./hamburguer-menu"
 
 export default function Header() {
     return (
@@ -14,6 +15,8 @@ export default function Header() {
                 <Menu />
                 <SearchForm />
             </div>
+            <HamburguerMenu />
         </header>
     )
 }
+
