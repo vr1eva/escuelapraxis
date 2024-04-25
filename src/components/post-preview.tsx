@@ -28,7 +28,7 @@ export default function PostPreview({ post, orientation = "horizontal" }: PostPr
             }
 
             <PortableText value={post.content} components={components} />
-            <Link href={`/lectura-critica/${resolvePostSegment(post._type)}/${post.slug}`} ><TypographyHighlight className="underline">Seguir leyendo</TypographyHighlight></Link>
+            <Link href={`/lectura-critica/${resolvePostSegment(post._type)}/${post.slug}`} ><TypographyHighlight className="underline xl:text-red text-black">Seguir leyendo</TypographyHighlight></Link>
         </div>
     </article >
 }

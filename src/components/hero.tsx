@@ -12,16 +12,16 @@ export default function Hero() {
         cta: "Conoce más"
     }
     return (
-        <section className="flex gap-[78px] max-w-[1160px] w-full mx-auto pt-[129px]">
-            <div>
-                <TypographyH1>{content.heading}</TypographyH1>
+        <section className="flex gap-[78px] max-w-[1160px] w-full mx-auto xl:pt-[129px] ">
+            <div className="xl:relative absolute bg-white bg-opacity-[92%] m-[40px_24px] p-4">
+                <TypographyH1 className="text-[28px]">{content.heading}</TypographyH1>
                 <Separator className="bg-red my-[8px] h-[3px]" />
-                <h4 className="uppercase text-[27px] tracking-[6%] font-extrabold">{content.brand}</h4>
+                <h4 className="uppercase xl:text-[27px] tracking-[6%] font-extrabold text-[20px]">{content.brand}</h4>
                 <TypographyBodyRegular className="mt-[16px]">{content.paragraph}</TypographyBodyRegular>
-                <Button className="rounded-none mt-[32px]">{content.cta}</Button>
+                <Button className="rounded-none mt-[32px] w-full xl:w-auto py-[10px]" variant="hero">{content.cta}</Button>
             </div>
-            <div className="shrink-0">
-                <Image alt="personas protestando de forma pacífica" src={heroImage} width={565} height={382} />
+            <div className="shrink-0 min-h-[499px] w-full">
+                <Image alt="personas protestando de forma pacífica" className="xl:w-[565px] xl:h-[382px] h-[556px] w-full  object-cover object-top" src={heroImage} />
             </div>
         </section>
     )

@@ -6,12 +6,12 @@ import { formatPrice } from "@/lib/utils"
 
 export default function BookList({ books, heading }: BookListProps) {
     return (
-        <section>
+        <section className="px-6">
             <div className="flex max-w-[1160px] w-full mx-auto justify-between">
                 <TypographyH2>{heading}</TypographyH2>
                 <Link href="/nuestros-libros"><TypographyBodyBold className="text-red p-[10px_20px]">Ver más</TypographyBodyBold></Link>
             </div>
-            <ul className="mt-[32px] pb-[22px] flex gap-[6px] items-start justify-center">
+            <ul className="mt-[32px] pb-[22px] flex gap-[6px] xl:items-start justify-center xl:flex-row flex-col items-center">
                 {books.map(book => (
                     <BookThumnbail book={book} key={book.title} />
                 ))}

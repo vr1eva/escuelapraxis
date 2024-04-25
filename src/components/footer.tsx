@@ -12,8 +12,8 @@ export default function Footer() {
         news: FOOTER_NEWS
     }
     return <div className="bg-[#1e1e1e]">
-        <footer className=" p-[32px_48px_39px] flex h-[462px] max-w-[1440px] mx-auto">
-            <div className="max-w-[536px]">
+        <footer className="p-[32px_24px_56px] xl:p-[32px_48px_39px] flex xl:flex-row flex-col xl:h-[462px] max-w-[1440px] mx-auto">
+            <div className="xl:max-w-[536px] w-full">
                 <Image src={logoWithBrand} width={249} height={128} alt="praxis logo" />
                 <TypographyBodyLight className="text-white mt-[24px]">{content.note}</TypographyBodyLight>
                 <ul className="mt-[24px] flex gap-[12px]">
@@ -24,7 +24,7 @@ export default function Footer() {
                     ))}
                 </ul>
             </div>
-            <div className="flex gap-[40px] ml-auto pt-[33px]">
+            <div className="flex xl:flex-row flex-col gap-[40px] ml-auto pt-[33px]">
                 <div>
                     <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Menú</h6>
                     <ul className="pl-[16px] flex flex-col gap-y-[20px] mt-4 max-w-[148px]">
@@ -48,9 +48,9 @@ export default function Footer() {
             </div>
         </footer>
         <div className="flex flex-col">
-            <Separator className="max-w-[1344px] mx-auto" />
-            <div className="flex justify-between max-w-[1344px] w-full mx-auto p-[28px_0_32px]">
-                <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">© EFP Praxis 2024</p>
+            <Separator className="xl:max-w-[1344px] mx-auto max-w-[90%] opacity-[80%]" />
+            <div className="flex justify-between max-w-[1344px] w-full mx-auto p-[24px_0_32px] xl:p-[28px_0_32px] xl:flex-row flex-col gap-[48px] xl:gap-0">
+                <p className="text-center text-white xl:font-bold font-normal text-[16px] leading-[150%] -tracking-[1%]">© EFP Praxis 2024</p>
                 <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">Diseñado por <TypographyHighlight>Andrómeda</TypographyHighlight></p>
             </div>
         </div>

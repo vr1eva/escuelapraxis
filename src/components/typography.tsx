@@ -3,7 +3,7 @@ import { TypographyProps } from "@/types";
 
 export function TypographyH1({ children, className }: TypographyProps) {
     return (
-        <h1 className={cn("font-mono font-normal text-[32px]", className)}>
+        <h1 className={cn("font-mono font-normal xl:text-[32px]", className)}>
             {children}
         </h1>
     )
@@ -46,9 +46,10 @@ export function TypographyBodyLight({ children, className }: TypographyProps) {
     )
 }
 
+export const typographyBodyBoldClassName = "font-sans font-bold text-[16px] leading-[172%] -tracking-[1%]"
 export function TypographyBodyBold({ children, className }: TypographyProps) {
     return (
-        <p className={cn("font-sans font-bold text-[16px] leading-[172%] -tracking-[1%]", className)}>{children}</p>
+        <p className={cn(typographyBodyBoldClassName, className)}>{children}</p>
     )
 }
 

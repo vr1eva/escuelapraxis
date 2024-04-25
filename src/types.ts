@@ -1,10 +1,11 @@
 import { StaticImageData } from "next/image"
-import { ReactNode } from "react"
+import { MouseEventHandler, ReactNode } from "react"
 import { PortableTextBlock, PortableTextBlockComponent } from "next-sanity";
 
 export interface HamburguerMenuItemProps {
     link: NavbarItemProps,
-    className?: string
+    className?: string,
+    onClick?: MouseEventHandler
 }
 
 export interface HamburguerMenuDropdownProps {

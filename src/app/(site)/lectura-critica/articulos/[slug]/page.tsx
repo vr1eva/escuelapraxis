@@ -21,7 +21,7 @@ export default async function Page({ params }: ArticlePageParams) {
             }]} />
             <PostDetail post={article} />
             <Separator className="mt-[72px] mb-[8px] max-w-[1160px] mx-auto" />
-            <PostList posts={posts} heading="Lecturas que podrían ser de tu interés" />
+            <PostList posts={posts} heading="Recomendaciones" />
         </main>
     )
 }
