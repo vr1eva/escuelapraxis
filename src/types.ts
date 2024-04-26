@@ -129,7 +129,10 @@ export interface PostThumbnailProps {
 
 export type Quote = {
     content: string,
-    signature: string,
+    signature: {
+        when: string,
+        author: string
+    },
     background: StaticImageData
 }
 

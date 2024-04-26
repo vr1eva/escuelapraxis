@@ -13,7 +13,7 @@ export default function Hero() {
     }
     return (
         <section className="flex gap-[78px] max-w-[1160px] w-full mx-auto xl:pt-[129px] ">
-            <div className="xl:relative absolute bg-white bg-opacity-[92%] m-[40px_24px] p-4">
+            <div className="xl:relative absolute bg-white bg-opacity-[92%] xl:m-[40px_24px] m-[40px_18px] p-4 xl:w-[517px] shrink-0 min-h-[419px] w-[90%] left-[1px]">
                 <TypographyH1 className="text-[28px]">{content.heading}</TypographyH1>
                 <Separator className="bg-red my-[8px] h-[3px]" />
                 <h4 className="uppercase xl:text-[27px] tracking-[6%] font-extrabold text-[20px]">{content.brand}</h4>

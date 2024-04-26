@@ -3,7 +3,7 @@ import { TypographyProps } from "@/types";
 
 export function TypographyH1({ children, className }: TypographyProps) {
     return (
-        <h1 className={cn("font-mono font-normal xl:text-[32px]", className)}>
+        <h1 className={cn("font-mono font-normal xl:text-[32px] text-[28px]", className)}>
             {children}
         </h1>
     )
