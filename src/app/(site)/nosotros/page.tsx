@@ -2,7 +2,7 @@ import { TypographyBodyRegular, TypographyH1, TypographyH2 } from "@/components/
 import Image from "next/image"
 import quienesSomos from "@/assets/quienesSomos.png"
 import queBuscamos from "@/assets/queBuscamos.png"
-import quehacemos from "@/assets/quehacemos.png"
+import quehacemos from "@/assets/queHacemos.png"
 import quoteBackground from "@/assets/quoteBackground.png"
 import { QuoteProps } from "@/types"
 import SectionHeading from "@/components/section-heading";
