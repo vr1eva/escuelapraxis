@@ -4,6 +4,7 @@ import { TypographyBodyRegular } from "@/components/typography";
 import PostList from "@/components/post-list"
 import { REVIEW_BREADCRUMB } from "@/assets/constants";
 import { getReviews } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 
 export default async function Page() {
@@ -15,11 +16,12 @@ export default async function Page() {
     const reviews = await getReviews()
     return (
         <main className="mb-[96px] min-h-screen">
-            <Breadcrumb segments={REVIEW_BREADCRUMB} />
-            <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px]">
+            <Breadcrumb segments={REVIEW_BREADCRUMB} className="px-6" />
+            <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px] px-6">
                 <PageHeading>{content.heading}</PageHeading>
                 <TypographyBodyRegular>{content.paragraph}</TypographyBodyRegular>
             </div>
+            <Separator className="bg-black mt-[48px] mb-[8px] max-w-[1160px] mx-auto w-[90%] xl:w-auto" />
             <PostList heading="Reseñas" posts={reviews} />
         </main>
     )

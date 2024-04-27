@@ -18,10 +18,10 @@ export default async function Page({ params }: BookPageParams) {
 
     return (
         <>
-            <Breadcrumb segments={[...BOOKS_BREADCRUMB, { title: book.title, href: book.url }]} />
+            <Breadcrumb className="px-4" segments={[...BOOKS_BREADCRUMB, { title: book.title, href: book.url }]} />
             <main>
                 <BookDetail book={book} />
-                <Separator className="bg-black max-w-[1160px] mx-auto mb-[8px]" />
+                <Separator className="bg-black max-w-[1160px] mx-auto mb-[8px] w-[90%]" />
                 <BookList books={recommendedBooks} heading="Recomendaciones" />
             </main>
         </>
@@ -30,7 +30,7 @@ export default async function Page({ params }: BookPageParams) {
 
 function BookDetail({ book }: BookDetailProps) {
     return (
-        <section className="flex gap-[32px] max-w-[1160px] mx-auto pt-[30px] pb-[105px]">
+        <section className="flex xl:flex-row flex-col items-center xl:items-start gap-[32px] max-w-[1160px] mx-auto pt-[30px] pb-[105px] px-6">
             <div className="shrink-0">
                 <Image src={book.cover} width={382} height={503} alt={`Book cover of "${book.title}"`} />
             </div>

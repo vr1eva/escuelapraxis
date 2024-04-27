@@ -25,7 +25,7 @@ export interface PostDetailProps {
 export interface PostTypeProps {
     type: string,
     className?: string,
-    isVertical: boolean
+    isVertical?: boolean
 }
 
 
@@ -187,7 +187,8 @@ export interface SuggestedReadingsProps {
 }
 
 export interface BreadcrumbProps {
-    segments: Segment[]
+    segments: Segment[],
+    className?: string
 }
 
 export type Segment = {

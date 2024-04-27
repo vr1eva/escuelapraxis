@@ -14,13 +14,13 @@ export default async function Page() {
 
     const articles = await getArticles()
     return (
-        <main className="mb-[96px]">
-            <Breadcrumb segments={ARTICLES_BREADCRUMB} />
-            <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px]">
+        <main className="mb-[56px] xl:mb-[96px]">
+            <Breadcrumb segments={ARTICLES_BREADCRUMB} className="px-6" />
+            <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] px-6">
                 <PageHeading>{content.heading}</PageHeading>
                 <TypographyBodyRegular>{content.paragraph}</TypographyBodyRegular>
             </div>
-            <Separator className="bg-black mt-[48px] mb-[8px] max-w-[1160px] mx-auto" />
+            <Separator className="bg-black mt-[48px] mb-[8px] max-w-[1160px] mx-auto w-[90%] xl:w-auto" />
             <PostList heading="Recién Subidos" posts={articles} />
         </main>
     )

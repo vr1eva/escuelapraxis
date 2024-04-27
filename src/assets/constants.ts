@@ -399,17 +399,17 @@ export const READING_INDEX_LINKS = [
     {
         label: "Artículos",
         image: articulos,
-        href: "/articulos"
+        href: "/lectura-critica/articulos"
     },
     {
         label: "Columna Praxis",
         image: columna,
-        href: "/columna"
+        href: "/lectura-critica/columna"
     },
     {
         label: "Reseñas",
         image: reseñas,
-        href: "/reviews"
+        href: "/lectura-critica/reviews"
     }
 
 ]

@@ -178,6 +178,29 @@ export async function getReview(slug: string): Promise<Review> {
   )
 }
 
+
+export async function getPost(tagString: string): Promise<Post> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: true
+  }).fetch<Post>(
+    groq`*[_type in ["review", "column", "article"] && $tagString in tags[]][0]{
+      _id,
+      _createdAt,
+      _type,
+      title,
+      "slug": slug.current,
+      "cover": cover.asset->url,
+      content,
+      tags,
+    }`,
+    { tagString }
+  )
+}
+
 export async function getPosts(tagString: string): Promise<Post[]> {
   return createClient({
     projectId: 'of5r9k1p',
