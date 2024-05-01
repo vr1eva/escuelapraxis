@@ -10,13 +10,13 @@ export default async function Page() {
   const books = await getBooks("Nuestros Libros")
   const posts = await getPosts("Lectura Crítica")
   return (
-    <main className="xl:pb-[23px] min-h-screen pb-[48px]">
+    <main className="xl:pb-[19px] min-h-screen pb-[48px]">
       <Hero />
       <Separator className="xl:max-w-[1160px] w-full mx-auto mb-[8px] mt-[48px] xl:mt-[112px] px-6 max-w-[90%]" />
       <BookList books={books} heading="Nuestros Libros" />
-      <Separator className="xl:max-w-[1160px] w-full mx-auto mb-[8px] mt-[48px] xl:mt-[112px] px-6 max-w-[90%]" />
+      <Separator className="xl:max-w-[1160px] w-full mx-auto mb-[8px] mt-[48px] xl:mt-[72px] px-6 max-w-[90%]" />
       <PostList posts={posts} orientation="horizontal" heading="Lectura Crítica" />
-      <div className="flex items-center justify-center w-full mt-[48px] xl:mt-[72px]">
+      <div className="flex items-center justify-center w-full mt-[48px] xl:mt-[50px]">
         <Image src={lenin} alt="ilustracion de Lenin" width={638} height={359} />
       </div>
     </main>

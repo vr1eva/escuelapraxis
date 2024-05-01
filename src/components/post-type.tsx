@@ -1,7 +1,8 @@
 import { PostTypeProps } from "@/types";
-import { TypographyBodyBold, TypographyHighlight, TypographyTitle } from "./typography";
+import { TypographyBodyBold, TypographyHighlight } from "./typography";
+import { cn } from "@/lib/utils";
 
-export default function PostType({ type, isVertical = false, className }: PostTypeProps) {
+export default function PostType({ type, className }: PostTypeProps) {
     let label;
     console.log(type)
     if (type === "article") {
@@ -12,6 +13,6 @@ export default function PostType({ type, isVertical = false, className }: PostTy
         label = "Reseña"
     }
     return (
-        isVertical ? <TypographyBodyBold><TypographyHighlight className="xl:font-medium font-normal xl:text-[20px] text-[16px]">{label}</TypographyHighlight></TypographyBodyBold> : <TypographyTitle className="xl:font-medium font-normal xl:text-[20px] text-[16px]">{label}</TypographyTitle>
+        <TypographyBodyBold><TypographyHighlight className={cn("xl:font-medium xl:text-dark font-bold xl:text-[20px] text-[16px]", className)}>{label}</TypographyHighlight></TypographyBodyBold>
     )
 }

@@ -10,24 +10,25 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 import SearchForm from "./search-form";
-import { LINKS } from "@/assets/constants";
+import { LINKS, SOCIAL_LINKS } from "@/assets/constants";
 import HamburguerMenuItem from "./hamburguer-menu-item";
 import email from "@/assets/email-red.svg"
 import fb from "@/assets/fb-red.svg"
 import ig from "@/assets/ig-red.svg"
 import { SyntheticEvent, useState } from "react";
+import Link from "next/link";
 
-const socialMediaLinks = [
+const socialMediaLinksWithRedFill = [
     {
         href: "mailto:praxis@gmail.com",
         icon: email
     },
     {
-        href: "facebook.com",
+        href: "https://www.facebook.com/escuelaformacionpraxis",
         icon: fb
     },
     {
-        href: "instagram.com",
+        href: "https://www.instagram.com/escuelapoliticapraxis/",
         icon: ig
     }
 ]
@@ -51,13 +52,13 @@ export default function HamburguerMenu() {
                         {LINKS.map(link => <HamburguerMenuItem key={link.title} link={link} onClick={handleLinkClick} />)}
                     </ul>
 
-                    <ul className="flex gap-[12px] mt-auto ml-auto">
-                        {socialMediaLinks.map(socialLink =>
-                            <li className="hover:cursor-pointer" key={socialLink.href}>
+                    <div className="flex gap-[12px] mt-auto ml-auto">
+                        {socialMediaLinksWithRedFill.map(socialLink =>
+                            <Link href={socialLink.href} target="_blank" className="hover:cursor-pointer" key={socialLink.href}>
                                 <Image src={socialLink.icon} width={24} height={24} alt="social media link" />
-                            </li>
+                            </Link>
                         )}
-                    </ul>
+                    </div>
                 </SheetContent>
             </Sheet>
         </div>

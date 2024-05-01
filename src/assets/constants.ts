@@ -335,20 +335,17 @@ export const LINKS = [
 ]
 
 
-
-
-
-export const FOOTER_SOCIAL_LINKS = [
+export const SOCIAL_LINKS = [
     {
         href: "mailto:praxis@gmail.com",
         icon: email
     },
     {
-        href: "facebook.com",
+        href: "https://www.facebook.com/escuelaformacionpraxis",
         icon: fb
     },
     {
-        href: "instagram.com",
+        href: "https://www.instagram.com/escuelapoliticapraxis/",
         icon: instagram
     },
 ]
@@ -384,14 +381,6 @@ export const FOOTER_NEWS = [
     {
         label: `Reseña: La Guerra Popular en la India`,
         href: `/reseña`
-    },
-    {
-        label: `Entrevista: Dirigentes de la CUAH ante la pandemia`,
-        href: `/lectura-critica`
-    },
-    {
-        label: `Revista: Época Socialista N°5`,
-        href: `/revista`
     },
 ]
 

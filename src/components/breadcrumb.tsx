@@ -8,16 +8,16 @@ import { cn } from "@/lib/utils"
 
 export default function Breadcrumb({ segments, className }: BreadcrumbProps) {
     return (
-        <div className={cn("flex items-center gap-[8px] m-[32px_40px] max-w-[1344px] mx-auto", className)}>
+        <div className={cn("flex flex-wrap items-center gap-[8px] gap-y-[4px] p-[32px_40px] max-w-[1344px] mx-auto", className)}>
             <Link className="text-[14px] leading-[169%] -tracking-[1%] font-light flex gap-[8px]" href="/">
                 <div className="shrink-0">
                     <Image src={home} width={24} height={24} alt="home icon" />
                 </div>
-                <span className="mr-4">Inicio</span>
+                <span>Inicio</span>
             </Link>
             {segments.map((segment) => (
                 <div key={segment.href} className="flex items-center gap-[8px] font-light last:font-bold">
-                    <Image alt="breadcrumb chevron" src={chevronRight} width={24} height={24} />
+                    <Image alt="breadcrumb chevron" src={chevronRight} width={24} height={24} className="self-start" />
                     <Link className="flex gap-1 capitalize text-[14px] leading-[169%] -tracking-[1%] font-inherit " href={segment.href}>{segment.title}</Link>
                 </div>
             ))}

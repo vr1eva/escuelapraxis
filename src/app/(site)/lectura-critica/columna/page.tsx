@@ -14,14 +14,14 @@ export default async function Page() {
 
     const columnEntries = await getColumnEntries()
     return (
-        <main className="mb-[96px] min-h-screen">
+        <main className="xl:pb-[96px] pb-[56px]">
             <Breadcrumb segments={COLUMN_BREADCRUMB} className="px-6" />
             <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px] px-6">
                 <PageHeading>{content.heading}</PageHeading>
                 <TypographyBodyRegular>{content.paragraph}</TypographyBodyRegular>
             </div>
             <Separator className="bg-black mt-[48px] mb-[8px] max-w-[1160px] mx-auto w-[90%] xl:w-auto" />
-            <PostList heading="Columna Praxis" posts={columnEntries} />
+            <PostList heading="Recién Subidos" posts={columnEntries} />
         </main>
     )
 }

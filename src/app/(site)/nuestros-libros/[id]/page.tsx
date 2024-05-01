@@ -3,7 +3,7 @@ import { BOOKS_BREADCRUMB } from "@/assets/constants";
 import Image from "next/image"
 import { BookDetailProps, BookPageParams } from "@/types";
 import PageHeading from "@/components/page-heading";
-import { TypographyBodyBold, TypographyBodyRegular, TypographyH3, TypographyTitle } from "@/components/typography";
+import { TypographyBodyBold, TypographyBodyRegular, TypographyH3, TypographyTitle, typographyBodyRegularClassNames } from "@/components/typography";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import BookList from "@/components/book-list";
@@ -45,20 +45,20 @@ function BookDetail({ book }: BookDetailProps) {
                 </div>
                 <div className="mt-[48px]">
                     <TypographyH3>Ficha Técnica</TypographyH3>
-                    <div className="flex flex-col flex-wrap max-h-[84px] max-w-[619px] mt-[8px] gap-x-[40px] ">
+                    <div className="flex flex-col flex-wrap xl:max-h-[84px] max-w-[619px] w-full mt-[8px] gap-x-[40px] ">
                         <div className="flex gap-2 grow">
-                            <TypographyBodyBold>Editorial:</TypographyBodyBold> <TypographyBodyRegular>{book.editorial}</TypographyBodyRegular>
+                            <TypographyBodyBold>Editorial: <span className={typographyBodyRegularClassNames}>{book.editorial}</span></TypographyBodyBold>
                         </div>
                         <div className="flex gap-2">
-                            <TypographyBodyBold>Idioma:</TypographyBodyBold> <TypographyBodyRegular>{book.language}</TypographyBodyRegular>
+                            <TypographyBodyBold>Idioma: <span className={typographyBodyRegularClassNames}>{book.language}</span></TypographyBodyBold>
                         </div>
-                        <div className="flex gap-2 grow">
-                            <TypographyBodyBold>Número de páginas:</TypographyBodyBold> <TypographyBodyRegular>{book.pages}</TypographyBodyRegular>
+                        <div className="flex gap-2">
+                            <TypographyBodyBold>Número de páginas: <span className={typographyBodyRegularClassNames}>{book.pages}</span></TypographyBodyBold>
                         </div>
                         <div className="flex gap-2">
                             <TypographyBodyBold>Dimensiones:</TypographyBodyBold> <TypographyBodyRegular>{book.dimensions}</TypographyBodyRegular>
                         </div>
-                        <div className="flex gap-2 grow">
+                        <div className="flex gap-2">
                             <TypographyBodyBold>Fecha de publicación:</TypographyBodyBold> <TypographyBodyRegular>{book.releaseDate}</TypographyBodyRegular>
                         </div>
                         <div className="flex gap-2">

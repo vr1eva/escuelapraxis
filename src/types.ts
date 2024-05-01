@@ -28,6 +28,10 @@ export interface PostTypeProps {
     isVertical?: boolean
 }
 
+export interface HeaderProps {
+    className?: string
+}
+
 
 export type Post = {
     _createdAt: string,

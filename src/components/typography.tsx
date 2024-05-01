@@ -36,7 +36,7 @@ export function TypographySubtitle({ children, className }: TypographyProps) {
 
 export function TypographyLink({ children, className }: TypographyProps) {
     return (
-        <h6 className={cn("font-sans font-semibold text-[16px] leading-[150%] -tracking-[1%]", className)}>{children}</h6>
+        <span className={cn("font-sans font-semibold text-[16px] leading-[150%] -tracking-[1%]", className)}>{children}</span>
     )
 }
 
