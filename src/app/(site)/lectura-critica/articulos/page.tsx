@@ -14,7 +14,7 @@ export default async function Page() {
 
     const articles = await getArticles()
     return (
-        <main className="mb-[56px] xl:mb-[96px]">
+        <main className="pb-[56px] xl:pb-[96px]">
             <Breadcrumb segments={ARTICLES_BREADCRUMB} className="px-6" />
             <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] px-6">
                 <PageHeading>{content.heading}</PageHeading>

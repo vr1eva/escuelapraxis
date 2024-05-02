@@ -14,13 +14,13 @@ export default async function Page({ params }: ArticlePageParams) {
     console.log(article)
     if (!article || !posts) return <p>Loading...</p>
     return (
-        <main className="mb-[96px] min-h-screen">
+        <main className="pb-[56px] xl:pb-[96px] min-h-screen">
             <Breadcrumb segments={[...ARTICLES_BREADCRUMB, {
                 title: article.title,
                 href: `/lectura-critica/articulos/${slug}`
             }]} />
             <PostDetail post={article} />
-            <Separator className="mt-[72px] mb-[8px] max-w-[1160px] mx-auto" />
+            <Separator className="mt-[56px] xl:mt-[72px] mb-[8px] max-w-[90%] mx-auto" />
             <PostList posts={posts} heading="Recomendaciones" />
         </main>
     )

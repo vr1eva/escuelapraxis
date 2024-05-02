@@ -19,7 +19,7 @@ export default async function Page({ params }: ReviewPageParams) {
                 href: `/lectura-critica/reviews/${slug}`
             }]} />
             <PostDetail post={review} />
-            <Separator className="mt-[72px] mb-[8px] max-w-[1160px] mx-auto" />
+            <Separator className="mt-[72px] mb-[8px] max-w-[90%] mx-auto" />
             <PostList orientation="horizontal" posts={posts} heading="Recomendaciones" />
         </main>
     )

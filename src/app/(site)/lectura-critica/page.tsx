@@ -13,7 +13,7 @@ import { PortableText } from "next-sanity"
 
 export default async function Page() {
     return (
-        <main className="min-h-screen mb-[56px] xl:mb-[96px]">
+        <main className="min-h-screen pb-[56px] xl:pb-[96px]">
             <Banner image={lecturaCritica} />
             <Index />
             <Separator className="opacity-1 bg-dark xl:max-w-[1160px] max-w-[90%] mx-auto mt-[56px] xl:mt-[96px] mb-[8px]" />

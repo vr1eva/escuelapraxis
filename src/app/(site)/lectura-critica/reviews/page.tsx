@@ -15,7 +15,7 @@ export default async function Page() {
 
     const reviews = await getReviews()
     return (
-        <main className="xl:mb-[96px] mb-[56px]">
+        <main className="xl:pb-[96px] pb-[56px]">
             <Breadcrumb segments={REVIEW_BREADCRUMB} className="px-6" />
             <div className="max-w-[1160px] mx-auto flex flex-col gap-[16px] mb-[56px] px-6">
                 <PageHeading>{content.heading}</PageHeading>

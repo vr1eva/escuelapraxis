@@ -53,7 +53,8 @@ export function TypographyBodyBold({ children, className }: TypographyProps) {
     )
 }
 
-export const typographyBodyRegularClassNames = `font-sans font-normal text-[16px] leading-[169%] -tracking-[1%]`
+export const typographyBodyRegularClassNames = `font-sans font-normal text-[16px] lea
+ding-[169%] -tracking-[1%]`
 export function TypographyBodyRegular({ children, className }: TypographyProps) {
     return (
         <p className={cn(typographyBodyRegularClassNames, className)}>{children}</p>
