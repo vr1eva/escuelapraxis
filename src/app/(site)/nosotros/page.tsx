@@ -36,7 +36,7 @@ export default function Page() {
                             <TypographyBodyRegular key={paragraph[0]}>{paragraph}</TypographyBodyRegular>
                         ))}
                     </div>
-                    <div className="relative xl:max-w-[488px] bg-origin-content shrink-0 border-red border-2 w-full min-h-[196px] xl:order-1 -order-1 mx-auto bg-center bg-no-repeat bg-cover">
+                    <div className="relative xl:max-w-[488px] bg-origin-content shrink-0 border-red border-[4px] w-full min-h-[196px] xl:order-1 -order-1 mx-auto bg-center bg-no-repeat bg-cover">
                         <Image className="translate-y-[17px] -translate-x-[18px] xl:translate-y-[29px] xl:-translate-x-[31px]" alt="quienes somos" src={quienesSomos} />
                     </div>
                 </div>
