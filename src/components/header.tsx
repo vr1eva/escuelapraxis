@@ -5,7 +5,7 @@ import Link from "next/link"
 import HamburguerMenu from "./hamburguer-menu"
 import { HeaderProps } from "@/types"
 import { cn } from "@/lib/utils"
-import StubSearchForm from "./stub-search-form"
+import SearchFormDialog from "./search-form-dialog"
 
 export default async function Header({ className }: HeaderProps) {
     return (
@@ -15,7 +15,7 @@ export default async function Header({ className }: HeaderProps) {
             </Link>
             <div className="hidden xl:flex items-center w-full">
                 <Menu />
-                <StubSearchForm />
+                <SearchFormDialog />
             </div>
             <HamburguerMenu />
         </header>
