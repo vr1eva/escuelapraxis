@@ -14,7 +14,7 @@ export default async function NuestrosLibros() {
             {books.map((books, index) => (
                 <>
                     <Separator className="xl:max-w-[1160px] mx-auto mt-[34px] xl:mt-[56px] mb-[8px] max-w-[90%] opacity-1 bg-dark" />
-                    <BookList heading={bookRowCategories[index]} books={books} />
+                    <BookList heading={bookRowCategories[index]} books={books.slice(0, 4)} />
                 </>
             ))}
         </main>

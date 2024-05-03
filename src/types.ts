@@ -99,7 +99,6 @@ export interface MenuProps {
 export interface SearchFormProps {
     className?: string,
     books: Book[],
-    posts: Post[]
 }
 export interface StubSearchFormProps {
     className?: string,
