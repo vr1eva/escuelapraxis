@@ -9,7 +9,6 @@ import {
     SheetHeader,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import SearchForm from "./search-form";
 import { LINKS, SOCIAL_LINKS } from "@/assets/constants";
 import HamburguerMenuItem from "./hamburguer-menu-item";
 import email from "@/assets/email-red.svg"
@@ -17,6 +16,7 @@ import fb from "@/assets/fb-red.svg"
 import ig from "@/assets/ig-red.svg"
 import { SyntheticEvent, useState } from "react";
 import Link from "next/link";
+import StubSearchForm from "./stub-search-form";
 
 const socialMediaLinksWithRedFill = [
     {
@@ -46,7 +46,7 @@ export default function HamburguerMenu() {
                 </SheetTrigger>
                 <SheetContent className="w-full px-5 flex flex-col">
                     <SheetHeader>
-                        <SearchForm className="mt-[28px]" />
+                        <StubSearchForm className="mt-[28px]" />
                     </SheetHeader>
                     <ul className="mt-4 py-[12px] flex flex-col gap-[32px]">
                         {LINKS.map(link => <HamburguerMenuItem key={link.title} link={link} onClick={handleLinkClick} />)}

@@ -7,6 +7,38 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+
+export async function getAllBooks(): Promise<Book[]> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: true
+  }).fetch<Book[]>(
+    groq`*[_type == "book"]{
+      _id,
+      title,
+      "cover": cover.asset->url,
+      "url": url.current,
+      price,
+      description,
+      editorial,
+      language,
+      author,
+      pages,
+      dimensions,
+      releaseDate,
+      isbn,
+      tags
+    }`,
+  );
+}
+
+
+
+
+
 export async function getBooks(tagString: string): Promise<Book[]> {
   return createClient({
     projectId: 'of5r9k1p',
@@ -198,6 +230,27 @@ export async function getPost(tagString: string): Promise<Post> {
       tags,
     }`,
     { tagString }
+  )
+}
+
+export async function getAllPosts(): Promise<Post[]> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: true
+  }).fetch<Post[]>(
+    groq`*[_type in ["review", "column", "article"]]{
+      _id,
+      _createdAt,
+      _type,
+      title,
+      "slug": slug.current,
+      "cover": cover.asset->url,
+      content,
+      tags,
+    }`,
   )
 }
 

@@ -97,8 +97,14 @@ export interface MenuProps {
 }
 
 export interface SearchFormProps {
-    className?: string
+    className?: string,
+    books: Book[],
+    posts: Post[]
 }
+export interface StubSearchFormProps {
+    className?: string,
+}
+
 
 export type Book = {
     id: string,

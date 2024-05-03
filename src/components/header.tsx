@@ -1,11 +1,11 @@
 import Menu from "@/components/menu"
-import SearchForm from "@/components/search-form"
 import logo from "@/assets/logo.svg"
 import Image from "next/image"
 import Link from "next/link"
 import HamburguerMenu from "./hamburguer-menu"
 import { HeaderProps } from "@/types"
 import { cn } from "@/lib/utils"
+import StubSearchForm from "./stub-search-form"
 
 export default function Header({ className }: HeaderProps) {
     return (
@@ -15,7 +15,7 @@ export default function Header({ className }: HeaderProps) {
             </Link>
             <div className="hidden xl:flex items-center w-full">
                 <Menu />
-                <SearchForm />
+                <StubSearchForm />
             </div>
             <HamburguerMenu />
         </header>
