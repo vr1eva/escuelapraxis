@@ -96,9 +96,13 @@ export interface MenuProps {
     className?: string
 }
 
+export interface HamburguerMenuProps {
+    books: Book[]
+}
+
 export interface SearchFormProps {
     className?: string,
-    books: Book[],
+    books: Book[]
 }
 export interface StubSearchFormProps {
     className?: string,

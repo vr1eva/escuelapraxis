@@ -7,7 +7,7 @@ import { HeaderProps } from "@/types"
 import { cn } from "@/lib/utils"
 import StubSearchForm from "./stub-search-form"
 
-export default function Header({ className }: HeaderProps) {
+export default async function Header({ className }: HeaderProps) {
     return (
         <header className={cn("flex px-[16px]  xl:px-[48px] py-[8px] xl:py-[10px] items-center drop-shadow-md", className)}>
             <Link href="/" className="shrink-0 xl:h-[83px] xl:w-[62px] h-[39px] w-[52px] contents">
