@@ -29,7 +29,7 @@ export default function Page() {
     return (
         <main className="xl:pt-[56px] pt-[40px]">
             <section className="flex flex-col max-w-[1160px] mx-auto gap-[56px] pb-[96px] px-[24px]">
-                <div className="flex xl:flex-row flex-col xl:gap-[73px] gap-[32px] mb-[29px]">
+                <div className="flex xl:flex-row flex-col xl:gap-[73px] gap-[32px] xl:mb-[29px]">
                     <div className="mx-auto flex flex-col gap-y-4">
                         <TypographyH1 className="border-l-[3px] pl-[11px] w-full border-red pt-[2px]">{content.h1}</TypographyH1>
                         {content.whoWeAre.map(paragraph => (
@@ -71,7 +71,7 @@ function Quote({ quote }: QuoteProps) {
     return (
         <section style={{ backgroundImage: `url(${quote.background.src})` }} className="mx-auto md:bg-bottom-left bg-bottom  bg-cover bg-no-repeat min-h-[298px] w-full">
             <div className="xl:py-[74px] pt-[43px] pb-[93px] w-full max-w-[985px] mx-auto text-center flex flex-col px-[24px]">
-                <p className="xl:max-w-[985px] font-mono xl:text-[22px] text-[22px] leading-[150%] -tracking-[1%] text-center xl:font-medium">{quote.content}</p>
+                <p className="xl:max-w-[985px] font-mono xl:text-[22px] text-[20px] leading-[150%] -tracking-[1%] text-center xl:font-medium">{quote.content}</p>
                 <div className="flex flex-col xl:flex-row gap-x-[8px] gap-y-[4px] mt-[24px] justify-end max-w-[985px] ml-auto">
                     <p className="font-sans font-medium w-full md:w-auto xl:text-[18px] text-[16px]  mx-auto xl:mx-0 text-right italic">{quote.signature.when}</p> <span className="hidden xl:block font-sans font-medium xl:text-[18px] text-base" >-</span>
                     <p className="font-sans font-medium w-full xl:w-auto xl:text-[18px] text-base mx-auto xl:mx-0 text-right">{quote.signature.author}</p>
