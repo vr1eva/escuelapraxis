@@ -4,12 +4,16 @@ import { TypographyBodyLight, TypographyHighlight } from "./typography"
 import { SOCIAL_LINKS, FOOTER_SECTIONS, FOOTER_NEWS } from "@/assets/constants"
 import Link from "next/link"
 import { Separator } from "./ui/separator"
+import { getLastArticle, getLastColumnEntry, resolvePostSegment } from "@/lib/utils"
 
-export default function Footer() {
+export default async function Footer() {
+    const lastColumnEntryData = getLastColumnEntry()
+    const lastArticleData = getLastArticle()
+    const [lastColumn, lastArticle] = await Promise.all([lastColumnEntryData, lastArticleData])
     const content = {
         note: `Somos una organización que promueve espacios de formación y debate intelectual, la difusión de las ideas socialistas y la producción intelectual popular, aportando así a la lucha revolucionaria desde el campo de las ideas. `,
         sections: FOOTER_SECTIONS,
-        news: FOOTER_NEWS
+        news: [lastColumn, lastArticle]
     }
     return <div className="bg-[#1e1e1e]">
         <footer className="p-[32px_24px_56px] xl:p-[32px_48px_39px] flex xl:flex-row flex-col xl:min-h-[462px] max-w-[1440px] mx-auto">
@@ -38,9 +42,9 @@ export default function Footer() {
                 <div>
                     <h6 className="uppercase pl-[16px] border-l-2 border-red text-white font-medium text-[20px]">Lo nuevo</h6>
                     <ul className="pl-[16px] flex flex-col gap-y-[8px] mt-4 list-disc text-white">
-                        {FOOTER_NEWS.map(item => (
-                            <li key={item.label} className="max-w-[340px]">
-                                <Link href={item.href} className="text-[18px] font-light">{item.label}</Link>
+                        {content.news.map(item => (
+                            <li key={item.title} className="max-w-[340px]">
+                                <Link href={`/lectura-critica/${resolvePostSegment(item._type)}/${item.slug}`} className="text-[18px] font-light">{item.title}</Link>
                             </li>
                         ))}
                     </ul>

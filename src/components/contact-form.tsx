@@ -15,12 +15,12 @@ export default function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null)
 
     return (
-        <div className="xl:pl-[79px] xl:border-l xl:border-l-light-gray ">
-            <TypographyBodyRegular className="w-full mt-[32px]">Compártenos tus datos para que podamos ponernos en contacto contigo.</TypographyBodyRegular>
+        <div className="xl:pl-[79px] xl:border-l xl:border-l-light-gray mt-[32px]">
+            <TypographyBodyRegular className="w-full ">Compártenos tus datos para que podamos ponernos en contacto contigo.</TypographyBodyRegular>
             <form ref={formRef} onSubmit={async (e) => {
                 await handleSubmit(e)
                 formRef.current?.reset()
-            }} className="mt-[32px] xl:mt-[56px] xl:shrink-0 flex flex-col gap-[16px] ">
+            }} className="mt-[32px] xl:mt-[16px] xl:shrink-0 flex flex-col gap-[16px] ">
                 <Input name="name" className={cn(contactInputClassName)} placeholder="Nombres y Apellidos" />
                 <div className="flex gap-4 xl:flex-row flex-col">
                     <Input name="email" className={cn(contactInputClassName)} placeholder="Correo electrónico" />

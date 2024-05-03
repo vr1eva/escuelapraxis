@@ -276,6 +276,49 @@ export async function getPosts(tagString: string): Promise<Post[]> {
   )
 }
 
+export async function getLastColumnEntry(): Promise<Post> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: false
+  }).fetch<Post>(
+    groq`*[_type == "column"][0]{
+      _id,
+      _createdAt,
+      _type,
+      title,
+      "slug": slug.current,
+      "cover": cover.asset->url,
+      content,
+      tags,
+    }`,
+  )
+}
+
+export async function getLastArticle(): Promise<Article> {
+  return createClient({
+    projectId: 'of5r9k1p',
+    dataset: 'production',
+    apiVersion: "2024-04-23",
+    perspective: 'published',
+    useCdn: false
+  }).fetch<Article>(
+    groq`*[_type == "article"][0]{
+      _id,
+      _createdAt,
+      _type,
+      title,
+      "slug": slug.current,
+      "cover": cover.asset->url,
+      content,
+      tags,
+    }`,
+  )
+}
+
+
 export function resolvePostSegment(postType: string) {
   let segment;
   if (postType === "article") {
