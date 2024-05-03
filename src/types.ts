@@ -178,7 +178,8 @@ export interface PageHeadingProps {
 export interface PostListProps {
     posts: Post[],
     heading: string,
-    orientation?: string
+    orientation?: string,
+    className?: string
 }
 
 export interface PostPreviewProps {

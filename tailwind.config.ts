@@ -10,12 +10,12 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      'xl': { 'min': '600px' },
+    },
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       fontFamily: {

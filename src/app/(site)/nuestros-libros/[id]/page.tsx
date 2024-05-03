@@ -19,7 +19,7 @@ export default async function Page({ params }: BookPageParams) {
     return (
         <>
             <Breadcrumb className="px-4" segments={[...BOOKS_BREADCRUMB, { title: book.title, href: book.url }]} />
-            <main>
+            <main className="pb-[92px]">
                 <BookDetail book={book} />
                 <Separator className="bg-black max-w-[1160px] mx-auto mb-[8px] w-[90%]" />
                 <BookList books={recommendedBooks} heading="Recomendaciones" />

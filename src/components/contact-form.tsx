@@ -11,9 +11,6 @@ const contactInputClassName = cn(typographyBodyRegularClassNames, `placeholder:t
 
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("xdoqyjyy");
-    if (state.succeeded) return (
-        <p>Thanks</p>
-    )
     return (
         <div className="xl:pl-[79px] xl:border-l xl:border-l-light-gray ">
             <TypographyBodyRegular className="w-full mt-[32px]">Compártenos tus datos para que podamos ponernos en contacto contigo.</TypographyBodyRegular>
@@ -31,8 +28,8 @@ export default function ContactForm() {
                 </label>
                 <Textarea name="message" className={cn(contactInputClassName, "w-full h-[224px]")} rows={5} placeholder="Mensaje" />
                 <Button className="mt-[10px] order-3" variant="primary" size="free" type="submit" ><TypographyBodyBold>Enviar mensaje</TypographyBodyBold></Button>
-                {state.succeeded ? <TypographyHighlight>Tu mensaje ha sido enviado. Nos pondremos en contacto contigo. </TypographyHighlight> : null}
             </form>
+            {true ? <TypographyHighlight className="font-normal block mt-[32px]">Tu mensaje ha sido enviado. Nos pondremos en contacto contigo. </TypographyHighlight> : null}
         </div>
 
     )

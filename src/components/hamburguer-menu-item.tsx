@@ -34,7 +34,7 @@ function HamburguerMenuDropdown({ link }: HamburguerMenuDropdownProps) {
                 />
 
             </div>
-            {dropdownIsVisible ? <ul className="mt-2">
+            {dropdownIsVisible ? <ul className="mt-2 ml-5">
                 {link.sublinks.map(sublink => (
                     <HamburguerMenuItem className="py-2" key={sublink.href} link={sublink} />
                 ))}

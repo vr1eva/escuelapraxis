@@ -15,8 +15,8 @@ export default async function Page() {
       <Separator className="xl:max-w-[1160px] w-full mx-auto mb-[8px] mt-[48px] xl:mt-[112px] px-6 max-w-[90%]" />
       <BookList books={books} heading="Nuestros Libros" />
       <Separator className="xl:max-w-[1160px] w-full mx-auto mb-[8px] mt-[48px] xl:mt-[72px] px-6 max-w-[90%]" />
-      <PostList posts={posts} orientation="horizontal" heading="Lectura Crítica" />
-      <div className="flex items-center justify-center w-full mt-[48px] xl:mt-[50px]">
+      <PostList className="pb-0" posts={posts} orientation="horizontal" heading="Lectura Crítica" />
+      <div className="flex items-center justify-center w-full mt-[48px] xl:-mt-[6px]">
         <Image src={lenin} alt="ilustracion de Lenin" width={638} height={359} />
       </div>
     </main>
