@@ -10,7 +10,7 @@ export default function Hero() {
         heading: "Escuela de Formación Política",
         brand: "Praxis",
         paragraph: "Somos una organización que busca cumplir los objetivo de formar, investigar y difundir distintas iniciativas desde una perspectiva socialista, por medio de trabajo colectivo, generando aportes que nos permita transformar nuestra realidad social.",
-        cta: "Conoce más"
+        cta: "Conoce más acerca de nosotros"
     }
     return (
         <section className="flex xl:flex-row flex-col xl:gap-[78px] gap-[32px] max-w-[1160px] w-full mx-auto pt-[32px] xl:pt-[73px]">
