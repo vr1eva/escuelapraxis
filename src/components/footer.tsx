@@ -51,7 +51,7 @@ export default function Footer() {
             <Separator className="xl:max-w-[1344px] mx-auto max-w-[90%] opacity-[26%]" />
             <div className="flex justify-between max-w-[1344px] w-full mx-auto p-[24px_0_32px] xl:p-[28px_0_32px] xl:flex-row flex-col gap-[48px] xl:gap-0">
                 <p className="text-center text-white xl:font-bold font-normal text-[16px] leading-[150%] -tracking-[1%]">© EFP Praxis 2024</p>
-                <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">Diseñado por <TypographyHighlight>Andrómeda</TypographyHighlight></p>
+                <p className="text-center text-white font-bold text-[16px] leading-[150%] -tracking-[1%]">Diseñado por <Link href="https://andromedacasadigital.netlify.app/"><TypographyHighlight>Andrómeda</TypographyHighlight></Link></p>
             </div>
         </div>
     </div>
