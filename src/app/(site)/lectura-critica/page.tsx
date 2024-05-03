@@ -7,7 +7,7 @@ import { READING_INDEX_LINKS } from "@/assets/constants"
 import { IndexLinkProps } from "@/types"
 import { Separator } from "@/components/ui/separator"
 import PostList from "@/components/post-list"
-import { cn, getPost, getPosts } from "@/lib/utils"
+import { cn, getPost, getPosts, resolvePostSegment } from "@/lib/utils"
 import PostType from "@/components/post-type"
 import { PortableText } from "next-sanity"
 
@@ -61,7 +61,7 @@ async function Index() {
                 </div>
                 <TypographyH2 className="mt-[16px]">{specialPost.title}</TypographyH2>
                 <PortableText value={specialPost.content} components={components} />
-                <Link className="mt-[8px] inline underline" href="/reseña/1 ">  <TypographyLink >Seguir leyendo</TypographyLink></Link>
+                <Link className="mt-[8px] inline underline" href={`/lectura-critica/${resolvePostSegment(specialPost._type)}/${specialPost.slug}`}>  <TypographyLink >Seguir leyendo</TypographyLink></Link>
             </div>
         </section>
     )
