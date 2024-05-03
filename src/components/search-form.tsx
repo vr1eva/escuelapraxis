@@ -6,7 +6,8 @@ import Image from "next/image"
 import { SearchFormProps } from "@/types"
 import { cn, formatPrice, getAllBooks } from "@/lib/utils"
 import { useState } from "react"
-import { TypographyBodyRegular, TypographyHighlight } from "./typography"
+import { TypographyBodyRegular, TypographyHighlight, TypographySubtitle } from "./typography"
+import Link from "next/link"
 
 export default function SearchForm({ className, books }: SearchFormProps) {
     const [search, setSearch] = useState("")
@@ -19,13 +20,14 @@ export default function SearchForm({ className, books }: SearchFormProps) {
             <Image src={zoom} alt="search icon" width={24} height={24} className="absolute left-[4px] top-[6px]" />
             {<div className="absolute max-h-[500px] overflow-y-auto top-10 left-0 py-2 w-full bg-white list-none space-y-1">
                 {filteredBooks.map(book => (
-                    <li key={book.id} className="hover:bg-[#f0f0f0] transition-all flex space-x-2 px-4 py-2 cursor-pointer">
-                        <Image width={50} height={20} src={book.cover} alt={book.title} />
-                        <div className="flex items-start flex-col">
-                            <TypographyBodyRegular className="text-left text-dark font-mono text-[20px]">{book.title}</TypographyBodyRegular>
-                            <TypographyHighlight className="text-left w-full">{formatPrice(book.price)}</TypographyHighlight>
+                    <Link href={`/nuestros-libros/${book.url}`} key={book.id} className="hover:bg-[#f0f0f0] transition-all flex gap-[16px] px-4 py-2 cursor-pointer">
+                        <Image width={80} height={30} src={book.cover} alt={book.title} />
+                        <div className="flex items-start text-left flex-col">
+                            <TypographySubtitle>{book.title}</TypographySubtitle>
+                            <TypographyBodyRegular className="text-left text-dark font-mono text-[20px]">{book.author}</TypographyBodyRegular>
+                            <TypographyHighlight className="text-left w-full mt-auto">{formatPrice(book.price)}</TypographyHighlight>
                         </div>
-                    </li>
+                    </Link>
                 ))}
             </div>}
         </form>

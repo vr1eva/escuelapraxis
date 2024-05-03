@@ -104,6 +104,10 @@ export interface SearchFormProps {
     className?: string,
     books: Book[]
 }
+
+export interface SearchDialogProps {
+    books: Book[]
+}
 export interface StubSearchFormProps {
     className?: string,
 }

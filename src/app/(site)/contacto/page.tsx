@@ -22,11 +22,11 @@ export default function Page() {
                 <div className="flex flex-col  gap-[24px]">
 
                     <TypographyBodyRegular>Si deseas contactarnos, puedes dejarnos un mensaje a través del formulario o escribirnos directamente a <Link href="mailto:praxis@gmail.com" className={contactInfoHighlightClassName}>praxis@gmail.com</Link></TypographyBodyRegular>
-                    <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo, puedes comunicarte al número <Link target="_blank" href="https://wa.me/+51969749100/?text=Hola Librería Praxis, " className={contactInfoHighlightClassName}>969749100.</Link></TypographyBodyRegular>
+                    <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo <Link target="_blank" href="https://wa.me/+51969749100/?text=Hola Librería Praxis, " className={contactInfoHighlightClassName}>haz click aquí.</Link></TypographyBodyRegular>
                 </div>
             </div>
             <div className="pb-[56px] xl:pb-0 xl:-order-1 order-2 absolute bottom-[56px] left-0 w-full place-content-center px-[24px] xl:px-0">
-                <TypographySubtitle className="mt-[40px] font-medium">Síguenos:</TypographySubtitle>
+                <TypographySubtitle className="mt-[56px] font-medium">Síguenos:</TypographySubtitle>
                 <div className="flex gap-[12px] items-center mt-4">
                     <Link target="_blank" href="https://www.facebook.com/escuelaformacionpraxis" className="shrink-0">
                         <Image width={24} height={24} src={facebook} alt="facebook logo" />
