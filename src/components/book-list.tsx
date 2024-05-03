@@ -6,11 +6,11 @@ import { formatPrice } from "@/lib/utils"
 
 export default function BookList({ books, heading }: BookListProps) {
     return (
-        <section>
+        <section >
             <div className="flex max-w-[1160px] w-full mx-auto justify-between xl:px-0 px-6">
                 <TypographyH2>{heading}</TypographyH2>
             </div>
-            <ul className="max-w-[1160px] mx-auto px-[37.5px] mt-[8px] xl:mt-[32px] flex gap-[6px] xl:justify-start xl:flex-row flex-col items-start">
+            <ul className="max-w-[1160px] overflow-x-auto mx-auto px-[37.5px] mt-[8px] xl:mt-[32px] flex gap-[6px] xl:justify-start xl:flex-row flex-col items-start">
                 {books.map(book => (
                     <BookThumnbail book={book} key={book.title} />
                 ))}

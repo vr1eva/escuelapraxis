@@ -25,14 +25,14 @@ export default function Page() {
                     <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo, puedes comunicarte al número <Link href="tel:+51987654321" className={contactInfoHighlightClassName}>987654321.</Link></TypographyBodyRegular>
                 </div>
             </div>
-            <div className="pb-[56px] xl:pb-0 xl:-order-1 order-2 absolute bottom-0 left-0 w-full place-content-center px-[24px] xl:px-0">
-                <TypographySubtitle className="mt-[40px]">Síguenos:</TypographySubtitle>
+            <div className="pb-[56px] xl:pb-0 xl:-order-1 order-2 absolute bottom-[56px] left-0 w-full place-content-center px-[24px] xl:px-0">
+                <TypographySubtitle className="mt-[40px] font-medium">Síguenos:</TypographySubtitle>
                 <div className="flex gap-[12px] items-center mt-4">
                     <Link target="_blank" href="https://www.facebook.com/escuelaformacionpraxis" className="shrink-0">
                         <Image width={24} height={24} src={facebook} alt="facebook logo" />
                     </Link>
                     <Link target="_blank" href="https://www.instagram.com/escuelapoliticapraxis/" className="shrink-0">
-                        <Image className="mx-auto xl:mb-0 mb-[32px]" width={24} height={24} src={instagram} alt="instagram logo" />
+                        <Image className="mx-auto xl:mb-0" width={24} height={24} src={instagram} alt="instagram logo" />
                     </Link>
                 </div>
                 <div className="w-full shrink-0 mt-[40px] bg-blend-lighten"><Image className="xl:mx-0 mx-auto object-cover" src={cosecha} alt="cosecha" width={172} height={192} /> </div>

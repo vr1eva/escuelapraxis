@@ -22,7 +22,7 @@ export default function PostList({ posts, heading, orientation = "vertical", cla
             <div className={cn(isVertical ? "flex-col" : "xl:flex-row flex-col", "flex gap-[32px] max-w-[1160px] mx-auto")}>
                 {posts.map(post => (
                     <article key={post.id} className={cn("flex w-full ", isVertical ? "items-start flex-col xl:flex-row gap-[12px] xl:gap-[32px] xl:items-center" : "flex-row items-center  xl:gap-[12px]  xl:border-r-[1px] pr-[37px] border-light-gray last-of-type:border-none last-of-type:pr-0", "flex-col")}>
-                        <div className="xl:min-w-[338px] w-full shrink-0">
+                        <div className="xl:max-w-[338px] w-full shrink-0">
                             <Image width={338} height={229} className="object-cover w-full" src={post.cover} alt={`post preview for ${post.title}`} />
                         </div>
                         <div className="py-[17.5px]">

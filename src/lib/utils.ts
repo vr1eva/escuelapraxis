@@ -14,7 +14,7 @@ export async function getAllBooks(): Promise<Book[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<Book[]>(
     groq`*[_type == "book"]{
       _id,
@@ -45,7 +45,7 @@ export async function getBooks(tagString: string): Promise<Book[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<Book[]>(
     groq`*[_type == "book" && $tagString in tags[]]{
       _id,
@@ -153,7 +153,7 @@ export async function getColumnEntries(): Promise<ColumnEntry[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<ColumnEntry[]>(
     groq`*[_type == "column"]{
       _id,
@@ -174,7 +174,7 @@ export async function getReviews(): Promise<ColumnEntry[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<ColumnEntry[]>(
     groq`*[_type == "review"]{
       _id,
@@ -217,7 +217,7 @@ export async function getPost(tagString: string): Promise<Post> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<Post>(
     groq`*[_type in ["review", "column", "article"] && $tagString in tags[]][0]{
       _id,
@@ -239,7 +239,7 @@ export async function getAllPosts(): Promise<Post[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<Post[]>(
     groq`*[_type in ["review", "column", "article"]]{
       _id,
@@ -260,7 +260,7 @@ export async function getPosts(tagString: string): Promise<Post[]> {
     dataset: 'production',
     apiVersion: "2024-04-23",
     perspective: 'published',
-    useCdn: true
+    useCdn: false
   }).fetch<Post[]>(
     groq`*[_type in ["review", "column", "article"] && $tagString in tags[]]{
       _id,
