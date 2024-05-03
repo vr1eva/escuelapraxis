@@ -16,16 +16,15 @@ import { TypographyBodyRegular } from "./typography";
 import SearchForm from "./search-form";
 import { cn } from "@/lib/utils";
 import zoom from "@/assets/zoom.svg"
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function SearchDialog({ books }: SearchDialogProps) {
     const [open, setOpen] = useState(false);
     const pathname = usePathname()
-    const searchParams = useSearchParams()
 
     useEffect(() => {
         setOpen(false)
-    }, [pathname, searchParams])
+    }, [pathname])
     return (
         <Dialog open={open} onOpenChange={(e) => setOpen(e)}>
             <DialogTrigger className={cn("flex relative")}>
