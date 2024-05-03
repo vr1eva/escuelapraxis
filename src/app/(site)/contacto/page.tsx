@@ -22,7 +22,7 @@ export default function Page() {
                 <div className="flex flex-col  gap-[24px]">
 
                     <TypographyBodyRegular>Si deseas contactarnos, puedes dejarnos un mensaje a través del formulario o escribirnos directamente a <Link href="mailto:praxis@gmail.com" className={contactInfoHighlightClassName}>praxis@gmail.com</Link></TypographyBodyRegular>
-                    <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo, puedes comunicarte al número <Link href="tel:+51987654321" className={contactInfoHighlightClassName}>987654321.</Link></TypographyBodyRegular>
+                    <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo, puedes comunicarte al número <Link target="_blank" href="https://wa.me/+51969749100/?text=Hola Librería Praxis, " className={contactInfoHighlightClassName}>969749100.</Link></TypographyBodyRegular>
                 </div>
             </div>
             <div className="pb-[56px] xl:pb-0 xl:-order-1 order-2 absolute bottom-[56px] left-0 w-full place-content-center px-[24px] xl:px-0">

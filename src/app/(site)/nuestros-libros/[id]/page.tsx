@@ -4,11 +4,12 @@ import Image from "next/image"
 import { BookDetailProps, BookPageParams } from "@/types";
 import PageHeading from "@/components/page-heading";
 import { TypographyBodyBold, TypographyBodyRegular, TypographyH3, TypographyTitle, typographyBodyRegularClassNames } from "@/components/typography";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import BookList from "@/components/book-list";
-import { formatPrice, getBook, getBooks } from "@/lib/utils";
+import { cn, formatPrice, getBook, getBooks } from "@/lib/utils";
 import { PortableText } from '@portabletext/react';
+import Link from "next/link";
 
 export default async function Page({ params }: BookPageParams) {
     const bookData = getBook(params.id)
@@ -39,9 +40,9 @@ function BookDetail({ book }: BookDetailProps) {
                 <TypographyTitle className="mt-[8px]">{book.author}</TypographyTitle>
                 <PortableText value={book.description} />
                 <div className="flex items-center mt-[24px]">
-                    <TypographyBodyBold>Precio:</TypographyBodyBold>
+                    <TypographyBodyBold className="mt-[3px]">Precio:</TypographyBodyBold>
                     <p className="font-bold text-[20px] text-red leading-[150%] -tracking-[1%] ml-[8px]">{formatPrice(book.price)}</p>
-                    <Button className="ml-[16px]" variant="buy">Comprar libro</Button>
+                    <Link target="_blank" href={`https://wa.me/+51969749100/?text=Hola, estoy interesado en comprar este libro: ${book.title}`} className={cn("ml-[16px]", buttonVariants({ variant: "buy" }))}>Comprar libro</Link>
                 </div>
                 <div className="mt-[48px]">
                     <TypographyH3>Ficha Técnica</TypographyH3>
