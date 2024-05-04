@@ -20,8 +20,7 @@ export default function Page() {
             <PageHeading className="max-w-[1160px]">{data.heading}</PageHeading>
             <div className="w-full flex gap-[79px] mt-[32px] flex-col">
                 <div className="flex flex-col  gap-[24px]">
-
-                    <TypographyBodyRegular>Si deseas contactarnos, puedes dejarnos un mensaje a través del formulario o escribirnos directamente a <Link href="mailto:praxis@gmail.com" className={contactInfoHighlightClassName}>praxis@gmail.com</Link></TypographyBodyRegular>
+                    <TypographyBodyRegular>Si deseas contactarnos, puedes dejarnos un mensaje a través del formulario o escribirnos directamente a <Link href="mailto:escuelapoliticapraxis@gmail.com" className={contactInfoHighlightClassName}>escuelapoliticapraxis@gmail.com</Link></TypographyBodyRegular>
                     <TypographyBodyRegular>Si estás interesado en comprar libros o consultar nuestro catálogo <Link target="_blank" href="https://wa.me/+51969749100/?text=Hola Librería Praxis, " className={contactInfoHighlightClassName}>haz click aquí.</Link></TypographyBodyRegular>
                 </div>
             </div>
